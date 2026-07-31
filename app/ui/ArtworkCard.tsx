@@ -1,0 +1,2 @@
+import Image from "next/image";import Link from "next/link";import type {Artwork} from "../data";
+export function ArtworkCard({artwork}:{artwork:Artwork}){return <Link className="art-card" href={`/works/${artwork.slug}`}><Image src={artwork.image} alt={artwork.alt} width={1200} height={1500} sizes="(max-width: 800px) 100vw, 50vw"/><h3>{artwork.title}</h3><p>{artwork.year} · {artwork.medium}</p></Link>}

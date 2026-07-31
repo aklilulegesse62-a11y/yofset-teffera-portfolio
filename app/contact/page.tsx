@@ -1,0 +1,3 @@
+import type{Metadata}from"next";import{siteContent}from"../data";
+export const metadata:Metadata={title:"Contact"};
+export default function Contact(){return <main id="main"><header className="page-hero wrap"><p className="eyebrow">Contact</p><h1>Begin a <em>conversation</em></h1><p>For exhibition, collection, residency and collaboration enquiries.</p></header><section className="contact-page wrap"><div><p className="eyebrow">Email Yofset</p><a className="email-big" href={`mailto:${siteContent.email}`}>{siteContent.email}</a></div><div className="contact-meta"><div><small>Based</small>{siteContent.location}</div><div><small>Instagram</small>Link TBC</div><div><small>Other professional links</small>TBC</div></div></section></main>}

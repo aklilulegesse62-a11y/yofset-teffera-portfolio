@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function sitemap():MetadataRoute.Sitemap{const base="https://yofset-teffera.example";return["","/works","/about","/exhibitions","/cv","/contact"].map(path=>({url:base+path,lastModified:new Date(),changeFrequency:path==="/works"?"monthly":"yearly",priority:path===""?1:.7}))}

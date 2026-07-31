@@ -1,0 +1,1 @@
+import Link from"next/link";export default function NotFound(){return <main id="main" className="not-found"><div><h1>404</h1><p>This page has moved beyond the frame.</p><Link className="button" href="/">Return home <span>→</span></Link></div></main>}
