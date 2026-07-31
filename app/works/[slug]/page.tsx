@@ -20,7 +20,7 @@ export default async function ArtworkDetail({params}:{params:Promise<{slug:strin
         <p className="eyebrow">{artwork.category}</p>
         <h1>{artwork.title}</h1>
         <p className="artwork-series">Yofset Teffera Tesfaye</p>
-        <dl><div><dt>Year</dt><dd>{artwork.year}</dd></div><div><dt>Medium</dt><dd>{artwork.medium}</dd></div><div><dt>Dimensions</dt><dd>{artwork.dimensions}</dd></div></dl>
+        <dl><div><dt>Year</dt><dd>{artwork.year}</dd></div><div><dt>Medium</dt><dd>{artwork.medium}</dd></div><div><dt>Dimensions</dt><dd>{artwork.dimensions}</dd></div>{artwork.price&&<div><dt>Price</dt><dd>{artwork.price}</dd></div>}</dl>
         <a className="button artwork-inquire" href={`mailto:${siteContent.email}?subject=Inquiry about ${artwork.title}`}>Inquire <span>↗</span></a>
         <p className="artwork-description">{artwork.description}</p>
       </aside>
