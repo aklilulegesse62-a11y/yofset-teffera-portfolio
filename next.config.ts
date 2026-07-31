@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Serve supplied artwork files directly. The hosting image binding is not
+  // available in local previews, and the originals remain untouched.
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

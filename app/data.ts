@@ -1,11 +1,11 @@
-export type Artwork = {slug:string;title:string;year:string;medium:string;dimensions:string;description:string;image:string;alt:string;category:string};
+export type Artwork = {slug:string;title:string;year:string;medium:string;dimensions:string;description:string;image:string;alt:string;category:string;details?:string[]};
 export const siteContent = {
   artist: "Yofset Teffera Tesfaye",
   shortName: "Yofset Teffera",
   discipline: "Contemporary Ethiopian Artist",
   location: "Addis Ababa, Ethiopia",
   email: "yofsettefferatesfaye@gmail.com",
-  portrait: "",
+  portrait: "/images/portrait/photo_21_2026-07-31_12-42-31.jpg",
   cvPath: "",
   social: { instagram: "", other: "" },
   biography: [
@@ -24,5 +24,17 @@ export const siteContent = {
     {amharic:"ስሜት",title:"Semet / Emotion",date:"December 6–December 27 · Year TBC",venue:"Atmosphere",location:"Addis Ababa, Ethiopia",description:"Semet, meaning ‘Emotion,’ presented eight paintings exploring different stages of human emotion. Through expressive imagery and symbolism, the exhibition invited viewers to reflect on emotional transformation, vulnerability and healing. Several works were acquired by collectors.",context:""},
     {amharic:"",title:"Third Solo Exhibition",date:"In progress",venue:"Venue TBC",location:"Addis Ababa, Ethiopia",description:"Yofset Teffera is currently developing her third solo exhibition, continuing her exploration of identity, emotion, memory and contemporary Ethiopian visual storytelling.",context:""}
   ],
-  artworks: [] as Artwork[]
+  artworks: [
+    {slug:"untitled-01",title:"Untitled 01",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-01/_CLP9883.jpg",alt:"Four brightly coloured faces surrounded by flowers against a dark ground",category:"Paintings",details:["/images/artworks/project-01/_CLP9884.jpg","/images/artworks/project-01/_CLP9885.jpg","/images/artworks/project-01/_CLP9886.jpg","/images/artworks/project-01/_CLP9887.jpg"]},
+    {slug:"untitled-02",title:"Untitled 02",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-02/_CLP9880.jpg",alt:"Black-and-white figurative composition encircled by piano keys",category:"Paintings",details:["/images/artworks/project-02/_CLP9882.jpg"]},
+    {slug:"untitled-03",title:"Untitled 03",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-03/_CLP9889.jpg",alt:"Nested red and blue human profiles within yellow, red and blue circular forms",category:"Paintings",details:["/images/artworks/project-03/_CLP9890.jpg"]},
+    {slug:"untitled-04",title:"Untitled 04",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-04/_CLP9891.jpg",alt:"Painted architectural gateway framing a road, trees and cloud-filled sky",category:"Spatial Work",details:["/images/artworks/project-04/_CLP9892.jpg","/images/artworks/project-04/_CLP9893.jpg"]},
+    {slug:"untitled-05",title:"Untitled 05",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-05/_CLP9895.jpg",alt:"Pale blue face surrounded by an abundant field of colourful flowers",category:"Paintings",details:["/images/artworks/project-05/_CLP9897.jpg"]},
+    {slug:"untitled-06",title:"Untitled 06",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-06/_CLP9901.jpg",alt:"Black-and-white abstracted seated figure enclosed by a circle",category:"Paintings",details:["/images/artworks/project-06/_CLP9904.jpg"]},
+    {slug:"untitled-07",title:"Untitled 07",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-07/_CLP9907.jpg",alt:"Circular relief portrait with braided hair, jewellery and concentric dotted bands",category:"Mixed Media",details:["/images/artworks/project-07/_CLP9908.jpg","/images/artworks/project-07/_CLP9909.jpg"]},
+    {slug:"untitled-08",title:"Untitled 08",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-08/_CLP9913.jpg",alt:"Circular green relief portrait in profile with textured hair and dotted garments",category:"Mixed Media",details:["/images/artworks/project-08/_CLP9910.jpg"]},
+    {slug:"untitled-09",title:"Untitled 09",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-09/_CLP9914.jpg",alt:"Round blue object covered with interlocking raised forms and dotted patterns",category:"Objects",details:["/images/artworks/project-09/_CLP9914-2.jpg"]},
+    {slug:"untitled-10",title:"Untitled 10",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-10/_CLP9921.jpg",alt:"Textured black profile surrounded by concentric coloured dotted bands",category:"Mixed Media",details:["/images/artworks/project-10/_CLP9925.jpg"]},
+    {slug:"untitled-11",title:"Untitled 11",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-11/_CLP9919.jpg",alt:"Dotted green surface with raised geometric forms and gold accents",category:"Objects"}
+  ] as Artwork[]
 };

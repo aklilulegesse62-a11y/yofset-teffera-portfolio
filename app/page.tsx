@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteContent } from "./data";
 import { ArtworkCard } from "./ui/ArtworkCard";
 
@@ -8,14 +9,14 @@ export default function Home() {
     <main id="main">
       <section className="hero wrap">
         <div className="hero-copy">
-          <p className="eyebrow">Contemporary Ethiopian Artist</p>
+          <p className="eyebrow">Contemporary Ethiopian Artist · Addis Ababa</p>
           <h1>Yofset<br/><em>Teffera</em><br/>Tesfaye</h1>
-          <p className="location">Addis Ababa, Ethiopia</p>
+          <p className="location">Identity · Memory · Heritage · Transformation</p>
           <Link className="button" href="/works">View selected works <span>↗</span></Link>
         </div>
         <div className="hero-orbit" aria-hidden="true">
           <span className="orbit orbit-one"/><span className="orbit orbit-two"/><span className="orbit orbit-three"/>
-          <div className="hero-art"><span>Artwork<br/>forthcoming</span></div>
+          <div className="hero-art hero-portrait"><Image unoptimized src={siteContent.portrait} alt="Portrait of Yofset Teffera" fill priority sizes="(max-width: 800px) 68vw, 34vw"/></div>
         </div>
       </section>
 
