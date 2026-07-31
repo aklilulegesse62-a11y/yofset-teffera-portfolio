@@ -1,5 +1,6 @@
 export type Artwork = {slug:string;title:string;year:string;medium:string;dimensions:string;description:string;image:string;alt:string;category:string;details?:string[]};
-export const siteContent = {
+export const withBasePath = (path:string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+const rawSiteContent = {
   artist: "Yofset Teffera Tesfaye",
   shortName: "Yofset Teffera",
   discipline: "Contemporary Ethiopian Artist",
@@ -37,4 +38,14 @@ export const siteContent = {
     {slug:"untitled-10",title:"Untitled 10",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-10/_CLP9921.jpg",alt:"Textured black profile surrounded by concentric coloured dotted bands",category:"Mixed Media",details:["/images/artworks/project-10/_CLP9925.jpg"]},
     {slug:"untitled-11",title:"Untitled 11",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-11/_CLP9919.jpg",alt:"Dotted green surface with raised geometric forms and gold accents",category:"Objects"}
   ] as Artwork[]
+};
+
+export const siteContent = {
+  ...rawSiteContent,
+  portrait: withBasePath(rawSiteContent.portrait),
+  artworks: rawSiteContent.artworks.map((artwork) => ({
+    ...artwork,
+    image: withBasePath(artwork.image),
+    details: artwork.details?.map(withBasePath),
+  })),
 };
