@@ -60,6 +60,14 @@ const rawSiteContent = {
 export const siteContent = {
   ...rawSiteContent,
   portrait: withBasePath(rawSiteContent.portrait),
+  exhibitions: rawSiteContent.exhibitions.map((exhibition, index) => ({
+    ...exhibition,
+    poster: index === 0
+      ? withBasePath("/images/exhibitions/sefera-spot-poster.png")
+      : index === 1
+        ? withBasePath("/images/exhibitions/semet-emotion-poster.png")
+        : "",
+  })),
   press: rawSiteContent.press.map((item) => ({...item, image: withBasePath(item.image)})),
   artworks: rawSiteContent.artworks.map((artwork) => ({
     ...artwork,

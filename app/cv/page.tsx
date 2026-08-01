@@ -16,9 +16,10 @@ export default function CV() {
     <div className="wrap">
       <section className="cv-section">
         <h2>Solo Exhibitions</h2>
-        <div>{siteContent.exhibitions.slice(0, 2).map((exhibition) => <article key={exhibition.title}>
-          <h3>{exhibition.title}</h3>
-          <p>{exhibition.date} · {exhibition.venue}, {exhibition.location}</p>
+        <div className="cv-exhibition-list">{siteContent.exhibitions.slice(0, 2).map((exhibition) => <article className="cv-exhibition" key={exhibition.title}>
+          <div><h3>{exhibition.title}</h3>
+          <p>{exhibition.date} · {exhibition.venue}, {exhibition.location}</p></div>
+          {exhibition.poster && <a href={exhibition.poster} target="_blank" rel="noreferrer" aria-label={`Open ${exhibition.title} exhibition poster`}><Image unoptimized src={exhibition.poster} alt={`${exhibition.title} official exhibition poster`} width={360} height={480} sizes="(max-width: 800px) 45vw, 220px" /></a>}
         </article>)}</div>
       </section>
       <section className="cv-section">
