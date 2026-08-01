@@ -1,19 +1,34 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { siteContent } from "../data";
 
 export const metadata: Metadata = { title: "Contact" };
 
 export default function Contact() {
-  return <main id="main">
-    <header className="page-hero wrap"><p className="eyebrow">Contact</p><h1>Begin a <em>conversation</em></h1><p>For exhibition, collection, residency and collaboration enquiries.</p></header>
-    <section className="contact-page wrap">
-      <div><p className="eyebrow">Email Yofset</p><a className="email-big" href={`mailto:${siteContent.email}`}>{siteContent.email}</a></div>
-      <div className="contact-meta">
-        <div><small>Phone</small><a href={`tel:${siteContent.phone.replace(/\s/g, "")}`}>{siteContent.phone}</a></div>
-        <div><small>Based</small>{siteContent.location}</div>
-        <div><small>Instagram</small><a href={siteContent.social.instagram} target="_blank" rel="noreferrer">@_______yofset_______ ↗</a></div>
-        <div><small>Telegram</small><a href={siteContent.social.telegram} target="_blank" rel="noreferrer">@Yofi888 ↗</a></div>
+  return <main id="main" className="contact-showcase">
+    <section className="contact-stage wrap">
+      <Image unoptimized className="contact-stage-image" src={siteContent.portrait} alt="Yofset Teffera seated beneath a circular arrangement of artworks" fill priority sizes="(max-width: 800px) 100vw, 1280px" />
+      <div className="contact-stage-shade" aria-hidden="true" />
+      <div className="contact-stage-content">
+        <p className="contact-kicker"><span /> Start a conversation</p>
+        <h1>Let’s create a meaningful <em>connection.</em></h1>
+        <p className="contact-intro">For exhibitions, collections, residencies and thoughtful collaborations, reach Yofset directly.</p>
+        <div className="contact-actions">
+          <a className="contact-action contact-action-primary" href={`mailto:${siteContent.email}`}><span aria-hidden="true">✉</span> Email Yofset</a>
+          <a className="contact-action contact-action-secondary" href={`tel:${siteContent.phone.replace(/\s/g, "")}`}><span aria-hidden="true">☎</span> {siteContent.phone}</a>
+        </div>
+        <div className="contact-socials" aria-label="Social links">
+          <a href={siteContent.social.instagram} target="_blank" rel="noreferrer" aria-label="Yofset on Instagram"><b>IG</b><span>Instagram</span></a>
+          <a href={siteContent.social.telegram} target="_blank" rel="noreferrer" aria-label="Yofset on Telegram"><b>TG</b><span>Telegram</span></a>
+        </div>
+        <p className="contact-location">Addis Ababa, Ethiopia</p>
       </div>
+      <div className="contact-orbit contact-orbit-one" aria-hidden="true" />
+      <div className="contact-orbit contact-orbit-two" aria-hidden="true" />
+    </section>
+    <section className="contact-direct wrap">
+      <p>Direct email</p>
+      <a href={`mailto:${siteContent.email}`}>{siteContent.email}<span>↗</span></a>
     </section>
   </main>;
 }
