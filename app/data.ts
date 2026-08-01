@@ -8,7 +8,10 @@ const rawSiteContent = {
   email: "yofsettefferatesfaye@gmail.com",
   portrait: "/images/portrait/photo_21_2026-07-31_12-42-31.jpg",
   cvPath: "",
-  social: { instagram: "", other: "" },
+  social: {
+    instagram: "https://www.instagram.com/_______yofset_______/?hl=en",
+    telegram: "https://t.me/Yofi888",
+  },
   biography: [
     "Yofset Teffera is a self-taught contemporary Ethiopian artist based in Addis Ababa. After studying architecture and working across different professional fields, she left her career to dedicate herself fully to painting. A year of intensive studio practice led to her debut solo exhibition, where every artwork sold on opening night.",
     "Raised in a family of artists, Yofset’s earliest creative memories include watching her father paint her mother as she prepared traditional Ethiopian coffee. These experiences shaped her understanding of painting as a way to preserve memory, culture and human connection. Her practice explores identity, emotion, Ethiopian heritage and spirituality through figurative imagery, vivid colour and symbolic detail. Following two solo exhibitions, she is currently developing her third body of work."
