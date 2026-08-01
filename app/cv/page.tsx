@@ -4,8 +4,6 @@ import { siteContent } from "../data";
 
 export const metadata: Metadata = { title: "CV" };
 
-const empty = ["Group Exhibitions", "Projects and Commissions", "Awards and Grants"];
-
 export default function CV() {
   return <main id="main">
     <header className="page-hero wrap">
@@ -55,7 +53,6 @@ export default function CV() {
         <h2>Artistic Practice</h2>
         <div className="cv-practice"><span>Contemporary Painting</span><span>Figurative Art</span><span>Ethiopian Cultural Narratives</span><span>Identity and Heritage</span><span>Emotion and Memory</span><span>Spiritual Symbolism</span><p>Based in: {siteContent.location}</p></div>
       </section>
-      {empty.map((section) => <section className="cv-section" key={section}><h2>{section}</h2><p>Information forthcoming</p></section>)}
     </div>
   </main>;
 }
