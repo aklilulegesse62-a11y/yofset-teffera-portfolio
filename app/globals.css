@@ -88,10 +88,27 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .front-sun{transform-box:fill-box;transform-origin:center;animation:front-sun-orbit 13s linear infinite,front-sun-breathe 4.6s ease-in-out infinite}
 .front-moon{transform-box:fill-box;transform-origin:50% 0;animation:front-moon-swing 5.5s ease-in-out infinite}
 .front-eye-shape{transform-box:fill-box;transform-origin:center;animation:front-eye-blink 5s ease-in-out infinite}
+.front-portrait-motion{transform-box:fill-box;transform-origin:center;animation:front-portrait-drift 16s ease-in-out infinite}
+.front-moving-dots{transform-origin:1222px 526px;animation:front-dot-orbit 44s linear infinite}
+.front-moving-dots circle{transform-box:fill-box;transform-origin:center;animation:front-dot-scale 4.5s ease-in-out infinite}
+.front-moving-dots circle:nth-child(3n){animation-delay:-1.5s}
+.front-moving-dots circle:nth-child(4n){animation-delay:-3s}
+.front-moving-dots circle:nth-child(5n){animation-delay:-.75s}
+.front-rotating-rings{transform-origin:1222px 526px;animation:front-ring-turn 38s linear infinite}
+.front-travelling-waves{stroke-dasharray:520;animation:front-wave-travel 14s linear infinite,front-wave-draw 7s ease-in-out infinite}
+.front-door{stroke-dasharray:520;transform-box:fill-box;transform-origin:center bottom;animation:front-door-draw 10s ease-in-out infinite,front-door-breathe 6s ease-in-out infinite}
 @keyframes front-sun-orbit{to{transform:rotate(360deg)}}
 @keyframes front-sun-breathe{0%,100%{scale:.88;opacity:.72}50%{scale:1.12;opacity:1}}
 @keyframes front-moon-swing{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
 @keyframes front-eye-blink{0%,87%,100%{transform:scaleY(1)}91%,95%{transform:scaleY(.06)}}
+@keyframes front-portrait-drift{0%,100%{transform:rotate(-.7deg) scale(1.012)}50%{transform:rotate(.7deg) scale(1.025)}}
+@keyframes front-dot-orbit{to{transform:rotate(360deg)}}
+@keyframes front-dot-scale{0%,100%{transform:scale(.55);opacity:.3}50%{transform:scale(1.5);opacity:.9}}
+@keyframes front-ring-turn{to{transform:rotate(360deg)}}
+@keyframes front-wave-travel{0%{transform:translateX(-520px)}100%{transform:translateX(720px)}}
+@keyframes front-wave-draw{0%,100%{stroke-dashoffset:520;opacity:.15}45%,70%{stroke-dashoffset:0;opacity:.72}}
+@keyframes front-door-draw{0%,12%{stroke-dashoffset:520;opacity:.2}42%,82%{stroke-dashoffset:0;opacity:.82}100%{stroke-dashoffset:-520;opacity:.2}}
+@keyframes front-door-breathe{0%,100%{transform:scale(.985)}50%{transform:scale(1.018)}}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}
 .floral-corner{transform:translate(-2px,8px)}
 .symbol-cluster{animation:hero-symbol-breathe 9s ease-in-out infinite}

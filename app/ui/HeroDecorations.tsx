@@ -73,10 +73,19 @@ export function BrushDivider() {
 
 export function HeroDecorations() {
   const lockedPosition = {x:10,y:6};
+  const movingDots = Array.from({length:72},(_,index) => {
+    const angle=(index*5)*Math.PI/180;
+    const radius=286+(index%3)*22;
+    return <circle key={index} cx={1222+Math.cos(angle)*radius} cy={526+Math.sin(angle)*radius} r={index%6===0 ? 3 : 1.6} />;
+  });
   return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
     <defs><clipPath id="heroPortraitClip"><circle cx={1212 + lockedPosition.x} cy={520 + lockedPosition.y} r="197" /></clipPath></defs>
-    <image href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
-    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=animated-symbols-2`} width="1694" height="936" />
+    <image className="front-portrait-motion" href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
+    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=animated-scene-3`} width="1694" height="936" />
+    <g className="front-moving-dots" fill="#386fa8">{movingDots}</g>
+    <g className="front-rotating-rings" fill="none" strokeLinecap="round"><circle cx="1222" cy="526" r="238" stroke="#386fa8" strokeWidth="3" strokeDasharray="170 18 92 12"/><circle cx="1222" cy="526" r="266" stroke="#c79b3a" strokeWidth="2" strokeDasharray="4 11"/></g>
+    <g transform="translate(420 405)"><g className="front-travelling-waves" fill="none" stroke="#c79b3a" strokeWidth="1.5" strokeLinecap="round"><path d="M0 0 C80-46 136 50 216 3 S358-39 438 10"/><path d="M0 35 C80-11 136 85 216 38 S358-4 438 45"/><path d="M0 70 C80 24 136 120 216 73 S358 31 438 80"/></g></g>
+    <g transform="translate(1535 260)"><g className="front-door" fill="none" stroke="#c79b3a" strokeWidth="1.8" strokeLinecap="round"><path d="M-84 176 V-38 A84 84 0 0 1 84-38 V176"/><path d="M-58 176 V-27 A58 58 0 0 1 58-27 V176"/><path d="M-31 176 V-15 A31 31 0 0 1 31-15 V176" strokeDasharray="7 8"/></g></g>
     <g transform="translate(935 170)"><g className="front-sun" fill="none" stroke="#c79b3a" strokeWidth="2.2" strokeLinecap="round">
       <circle r="18"/><path d="M0-28V-40 M0 28V40 M-28 0H-40 M28 0H40 M-20-20L-29-29 M20-20L29-29 M-20 20L-29 29 M20 20L29 29"/>
     </g></g>
