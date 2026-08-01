@@ -23,14 +23,6 @@ export default function CV() {
         </div>
       </section>
       <section className="cv-section">
-        <h2>Artist Biography</h2>
-        <div className="cv-prose">{siteContent.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-      </section>
-      <section className="cv-section">
-        <h2>Artist Statement</h2>
-        <div className="cv-prose">{siteContent.statement.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-      </section>
-      <section className="cv-section">
         <h2>Solo Exhibitions</h2>
         <div className="cv-exhibition-list">{siteContent.exhibitions.slice(0, 2).map((exhibition) => <article className="cv-exhibition" key={exhibition.title}>
           <div><h3>{exhibition.title}</h3>
