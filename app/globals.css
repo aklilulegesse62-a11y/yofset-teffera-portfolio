@@ -88,7 +88,6 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .front-sun{transform-box:fill-box;transform-origin:center;animation:front-sun-orbit 13s linear infinite,front-sun-breathe 4.6s ease-in-out infinite}
 .front-moon{transform-box:fill-box;transform-origin:50% 0;animation:front-moon-swing 5.5s ease-in-out infinite}
 .front-eye-shape{transform-box:fill-box;transform-origin:center;animation:front-eye-blink 5s ease-in-out infinite}
-.front-star{transform-box:fill-box;transform-origin:center;animation:front-star-turn 11s ease-in-out infinite,front-star-sparkle 3.6s ease-in-out infinite}
 .front-portrait-motion{transform-box:fill-box;transform-origin:center;animation:front-portrait-drift 16s ease-in-out infinite}
 .front-moving-dots{transform-origin:1222px 526px;animation:front-dot-orbit 44s linear infinite}
 .front-moving-dots circle{transform-box:fill-box;transform-origin:center;animation:front-dot-scale 4.5s ease-in-out infinite}
@@ -102,8 +101,6 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 @keyframes front-sun-breathe{0%,100%{scale:.88;opacity:.72}50%{scale:1.12;opacity:1}}
 @keyframes front-moon-swing{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
 @keyframes front-eye-blink{0%,87%,100%{transform:scaleY(1)}91%,95%{transform:scaleY(.06)}}
-@keyframes front-star-turn{0%,100%{rotate:-8deg}50%{rotate:18deg}}
-@keyframes front-star-sparkle{0%,100%{scale:.86;opacity:.62}50%{scale:1.14;opacity:1}}
 @keyframes front-portrait-drift{0%,100%{transform:rotate(-.7deg) scale(1.012)}50%{transform:rotate(.7deg) scale(1.025)}}
 @keyframes front-dot-orbit{to{transform:rotate(360deg)}}
 @keyframes front-dot-scale{0%,100%{transform:scale(.55);opacity:.3}50%{transform:scale(1.5);opacity:.9}}
