@@ -7,22 +7,6 @@ export default function Home() {
   const featured = siteContent.artworks.slice(0, 4);
   return <main id="main">
     <section className="hero wrap">
-      <div className="hero-reference-art" aria-hidden="true">
-        <span className="hd-face" />
-        <span className="hd-star">✦</span>
-        <span className="hd-sun" />
-        <span className="hd-moon" />
-        <span className="hd-eye"><i /></span>
-        <span className="hd-waves" />
-        <span className="hd-arch" />
-        <span className="hd-stairs" />
-        <span className="hd-flower"><i /></span>
-        <span className="hd-dots" />
-        <span className="hd-diamond" />
-        <span className="hd-paint hd-paint-blue" />
-        <span className="hd-paint hd-paint-gold" />
-        <span className="hd-ground-line" />
-      </div>
       <div className="hero-copy">
         <p className="eyebrow">Contemporary Ethiopian Artist · Addis Ababa</p>
         <h1>Yofset<br /><em>Teffera</em><br />Tesfaye</h1>
