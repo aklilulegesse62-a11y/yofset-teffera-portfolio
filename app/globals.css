@@ -59,6 +59,9 @@
 .hero-copy{padding-left:8px}
 .hero-handmade{position:absolute;z-index:0;left:50%;top:0;width:100vw;height:100%;transform:translateX(-50%);overflow:hidden;pointer-events:none}
 .hero-sketch-layer{display:block;width:100%;height:100%;overflow:visible}
+.hero-supplied-overlay{top:-78px;height:calc(100% + 78px)}
+.hero-supplied-overlay+.hero-copy~.hero-orbit{transform:translateX(105px)}
+.hero-supplied-overlay+.hero-copy~.hero-orbit .hero-art.hero-portrait{width:55%;box-shadow:0 0 0 2px rgba(247,244,237,.95)}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}
 .floral-corner{transform:translate(-2px,8px)}
 .symbol-cluster{animation:hero-symbol-breathe 9s ease-in-out infinite}
@@ -81,5 +84,5 @@
 @keyframes brush-reveal{from{stroke-dashoffset:340}to{stroke-dashoffset:0}}
 @keyframes arrow-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-7px)}}
 @media(max-width:1100px){.female-profile{transform:translate(-68px,52px) scale(.92)}.symbol-cluster{transform:translate(-30px,8px)}.hero-copy{padding-left:20px}.portrait-portal{width:112%;height:112%;left:-6%;top:-6%}}
-@media(max-width:800px){.hero{overflow:hidden;padding-top:70px}.hero-copy{padding-left:0}.hero-handmade{height:100%}.female-profile,.radial-rhythm,.brush-divider{display:none}.floral-corner{transform:translate(-20px,60px) scale(.72);transform-origin:left bottom;opacity:.7}.symbol-cluster{transform:translate(-300px,18px) scale(.72);transform-origin:center top}.ethiopian-motif{transform:translate(-210px,0) scale(.78);transform-origin:center bottom}.brush-underline{width:62%;margin-top:-18px}.cta-sketch-arrow{width:70px}.portrait-portal{width:120%;height:120%;left:-10%;top:-10%}}
-@media(max-width:520px){.symbol-cluster{display:none}.floral-corner{opacity:.48}.ethiopian-motif{display:none}.hero .location{max-width:100%;font-size:9px;letter-spacing:.055em;white-space:normal;line-height:1.6}.hero-cta{gap:7px}.cta-sketch-arrow{width:48px}.hero .button{min-width:225px;gap:20px}}
+@media(max-width:800px){.hero{overflow:hidden;padding-top:70px}.hero-copy{padding-left:0}.hero-handmade{height:100%}.hero-supplied-overlay{top:-76px;height:calc(100% + 76px);opacity:.7}.hero-supplied-overlay+.hero-copy~.hero-orbit{transform:none}.hero-supplied-overlay+.hero-copy~.hero-orbit .hero-art.hero-portrait{width:64%}.female-profile,.radial-rhythm,.brush-divider{display:none}.floral-corner{transform:translate(-20px,60px) scale(.72);transform-origin:left bottom;opacity:.7}.symbol-cluster{transform:translate(-300px,18px) scale(.72);transform-origin:center top}.ethiopian-motif{transform:translate(-210px,0) scale(.78);transform-origin:center bottom}.brush-underline{width:62%;margin-top:-18px}.cta-sketch-arrow{width:70px}.portrait-portal{width:120%;height:120%;left:-10%;top:-10%}}
+@media(max-width:520px){.hero-supplied-overlay{display:none}.symbol-cluster{display:none}.floral-corner{opacity:.48}.ethiopian-motif{display:none}.hero .location{max-width:100%;font-size:9px;letter-spacing:.055em;white-space:normal;line-height:1.6}.hero-cta{gap:7px}.cta-sketch-arrow{width:48px}.hero .button{min-width:225px;gap:20px}}

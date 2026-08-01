@@ -1,3 +1,5 @@
+import { withBasePath } from "../data";
+
 const palette = ["#071C2C", "#176B9C", "#2D8BA5", "#C6A04A", "#303436"];
 
 export function DottedHalo() {
@@ -70,7 +72,7 @@ export function BrushDivider() {
 }
 
 export function HeroDecorations() {
-  return <div className="hero-handmade" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1600 820" preserveAspectRatio="xMidYMid slice"><FemaleProfile/><FloralCorner/><SymbolCluster/><EthiopianMotif/><BrushDivider/></svg></div>;
+  return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice"><image href={withBasePath("/images/yofset-homepage-decorative-elements.svg")} width="1694" height="936" /></svg></div>;
 }
 
 export function BrushUnderline() {

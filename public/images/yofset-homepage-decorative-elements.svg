@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1694 936" role="img" aria-labelledby="title desc">
+  <title id="title">Yofset Teffera exact homepage decorative overlay</title>
+  <desc id="desc">Transparent SVG overlay traced to the approved 1694 by 936 homepage reference. All decorative systems are separated into named groups.</desc>
+  <defs>
+    <filter id="rough" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="27" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5"/>
+    </filter>
+    <filter id="brush" x="-25%" y="-60%" width="150%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.22" numOctaves="2" seed="9" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="7"/>
+    </filter>
+    <filter id="softPaper" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="14" result="paper"/>
+      <feBlend in="SourceGraphic" in2="paper" mode="soft-light"/>
+    </filter>
+    <style>
+      .decor{pointer-events:none}.line{fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .navy{stroke:#0b1c2e}.blue{stroke:#386fa8}.gold{stroke:#c79b3a}.black{stroke:#242a31}.sand{stroke:#d8c7a3}
+      .f-navy{fill:#0b1c2e}.f-blue{fill:#386fa8}.f-gold{fill:#c79b3a}.f-red{fill:#a83b30}.f-green{fill:#285f4b}.f-sand{fill:#e7ddd0}.f-black{fill:#242a31}
+    </style>
+  </defs>
+
+  <!-- Transparent canvas. Place this SVG over the hero with position:absolute; inset:0; width:100%; height:100%. -->
+
+  <g id="soft-edge-shapes" class="decor" opacity=".58">
+    <path d="M0 144 C53 162 90 195 117 232 L99 299 L145 389 L127 493 L147 557 L124 696 C92 790 48 858 0 874Z" fill="#e8ddd1"/>
+    <path d="M1694 727 L1642 773 L1598 833 L1618 889 L1694 916Z" fill="#e7dfd0"/>
+    <path d="M1582 936 C1560 875 1572 824 1625 769 L1694 728 L1694 936Z" fill="#e9dfd0"/>
+  </g>
+
+  <g id="female-profile-left" class="decor line black" stroke-width="2.2" opacity=".9" filter="url(#rough)">
+    <path d="M0 239 C42 203 89 199 122 220 C154 241 166 273 154 312 C148 330 141 344 150 355 C159 366 168 373 166 386 C164 398 151 402 142 408 C133 414 136 423 147 429 C158 435 160 444 153 452 C146 461 131 460 126 470 C121 480 131 495 143 503 C162 515 172 537 161 558 C146 586 108 606 74 598 C49 592 31 581 11 576"/>
+    <path d="M137 405 C124 400 112 391 105 380" opacity=".65"/>
+    <path d="M17 291 C48 265 70 249 91 252" opacity=".18"/>
+  </g>
+
+  <g id="scribble-star" class="decor line black" stroke-width="3.1" transform="translate(207 166) rotate(-8)" filter="url(#rough)">
+    <path d="M0-27 L7-7 L26-17 L13 2 L31 8 L10 11 L20 31 L0 16 L-17 32 L-9 10 L-31 6 L-10-2 L-24-20 L-5-10Z"/>
+    <path d="M-19-25 L15 27 M20-22 L-13 25" opacity=".72"/>
+  </g>
+
+  <g id="symbol-cluster" class="decor" transform="translate(785 170)">
+    <path id="crescent" d="M72 63 C50 64 38 49 41 31 C48 47 61 54 79 47 C78 53 76 59 72 63Z" class="f-blue" filter="url(#rough)"/>
+    <g id="sun" class="line gold" stroke-width="2.2" transform="translate(150 0)" filter="url(#rough)">
+      <circle r="18"/><circle r="13" opacity=".45"/>
+      <path d="M0-28V-40 M0 28V40 M-28 0H-40 M28 0H40 M-20-20L-29-29 M20-20L29-29 M-20 20L-29 29 M20 20L29 29"/>
+    </g>
+    <g id="eye" class="line navy" stroke-width="2.8" transform="translate(45 125)" filter="url(#rough)">
+      <path d="M-28 0 Q0-21 28 0 Q0 21-28 0Z"/><circle r="8" class="f-gold" stroke="none"/>
+      <path d="M0-29V-21 M-14-25L-10-18 M14-25L10-18" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g id="flowing-wavy-lines" class="decor line gold" stroke-width="1.25" opacity=".65" transform="translate(582 402)">
+    <path d="M0 15 C37-17 71 38 112 14 C154-10 183 14 213 43 C241 70 272 78 304 62"/>
+    <path d="M0 48 C37 16 71 71 112 47 C154 23 183 47 213 76 C241 103 272 111 304 95"/>
+    <path d="M0 81 C37 49 71 104 112 80 C154 56 183 80 213 109 C241 136 272 144 304 128"/>
+  </g>
+
+  <g id="portrait-portal" class="decor" transform="translate(1210 524)">
+    <circle r="273" class="line sand" stroke-width="1.4" opacity=".72"/>
+    <circle r="247" class="line gold" stroke-width="1.2" opacity=".62"/>
+    <circle r="224" class="line black" stroke-width="2.3" stroke-dasharray="360 18 125 11" filter="url(#rough)" opacity=".84"/>
+    <circle r="214" class="line blue" stroke-width="9" stroke-dasharray="220 11 128 8 405 14" filter="url(#brush)" opacity=".82"/>
+    <circle r="204" class="line black" stroke-width="4.5" stroke-dasharray="310 8 205 12" filter="url(#rough)" opacity=".86"/>
+    <circle r="197" class="line sand" stroke-width="2.4" stroke-dasharray="154 11 260 7" filter="url(#rough)" opacity=".86"/>
+  </g>
+
+  <g id="dotted-orbits" class="decor" transform="translate(1210 524)">
+    <circle r="303" class="line black" stroke-width="3.5" stroke-linecap="round" stroke-dasharray=".1 12" opacity=".82" transform="rotate(-18)"/>
+    <circle r="323" class="line gold" stroke-width="2.7" stroke-linecap="round" stroke-dasharray=".1 15" opacity=".72" stroke-dashoffset="7" transform="rotate(33)"/>
+    <circle r="344" class="line blue" stroke-width="3.6" stroke-linecap="round" stroke-dasharray=".1 18" opacity=".76" stroke-dashoffset="11" transform="rotate(74)"/>
+    <path d="M-281 190 C-227 266-141 320-37 337 C77 356 189 327 269 257" class="line black" stroke-width="4" stroke-linecap="round" stroke-dasharray=".1 13" opacity=".78"/>
+  </g>
+
+  <g id="paint-splatter" class="decor" transform="translate(1210 524)" opacity=".8">
+    <g class="f-blue">
+      <circle cx="-302" cy="-78" r="3"/><circle cx="-289" cy="-101" r="1.5"/><circle cx="-270" cy="-117" r="2.2"/><circle cx="-247" cy="-132" r="1.2"/><circle cx="-233" cy="-151" r="2.6"/><circle cx="-211" cy="-168" r="1.5"/><circle cx="-193" cy="-184" r="1.1"/><circle cx="-168" cy="-196" r="2.3"/><circle cx="-147" cy="-208" r="1.4"/>
+      <circle cx="-277" cy="122" r="2.8"/><circle cx="-255" cy="145" r="1.2"/><circle cx="-232" cy="168" r="2.2"/><circle cx="-209" cy="187" r="1.5"/><circle cx="-183" cy="204" r="3.1"/><circle cx="-158" cy="221" r="1.2"/><circle cx="-132" cy="232" r="2.1"/>
+      <circle cx="146" cy="-260" r="2.4"/><circle cx="163" cy="-248" r="1.2"/><circle cx="181" cy="-238" r="3.2"/><circle cx="199" cy="-224" r="1.5"/><circle cx="221" cy="-204" r="2.5"/><circle cx="239" cy="-182" r="1.1"/><circle cx="257" cy="-160" r="2.7"/>
+    </g>
+    <g class="f-gold">
+      <circle cx="-319" cy="55" r="3.8"/><circle cx="-305" cy="79" r="1.5"/><circle cx="-291" cy="104" r="2.4"/><circle cx="-270" cy="129" r="1.2"/><circle cx="-249" cy="151" r="3.1"/><circle cx="-225" cy="176" r="1.6"/><circle cx="-201" cy="194" r="2.4"/>
+    </g>
+    <g class="f-black" opacity=".7">
+      <circle cx="-330" cy="3" r="2.3"/><circle cx="-322" cy="27" r="1.1"/><circle cx="-313" cy="50" r="2.9"/><circle cx="-300" cy="75" r="1.4"/><circle cx="-283" cy="99" r="2.2"/>
+    </g>
+    <path d="M-268-175 C-202-198-112-211-39-201" class="line blue" stroke-width="4" stroke-dasharray="2 7 21 4" filter="url(#brush)"/>
+    <path d="M-270 168 C-214 212-130 240-58 237" class="line gold" stroke-width="5" stroke-dasharray="3 8 17 5" filter="url(#brush)"/>
+  </g>
+
+  <g id="right-architectural-arch" class="decor line gold" stroke-width="1.25" opacity=".65" transform="translate(1456 176)">
+    <path d="M0 400 V92 A106 106 0 0 1 212 92 V400"/>
+    <path d="M27 400 V105 A79 79 0 0 1 185 105 V400"/>
+    <path d="M54 400 V120 A52 52 0 0 1 158 120 V400"/>
+    <path d="M80 400 V139 A26 26 0 0 1 132 139 V400" opacity=".8"/>
+    <path d="M0 91 A106 106 0 0 1 212 91" class="line black" stroke-width="1" opacity=".28"/>
+  </g>
+
+  <g id="ethiopian-cross-ornament" class="decor line gold" stroke-width="1.6" transform="translate(1563 304)" filter="url(#rough)">
+    <path d="M0-55 L12-43 L6-31 L18-20 L8-9 L20 2 L8 13 L18 24 L6 35 L12 47 L0 59 L-12 47 L-6 35 L-18 24 L-8 13 L-20 2 L-8-9 L-18-20 L-6-31 L-12-43Z"/>
+    <path d="M0-42 V48 M-20 2 H20 M-9-20 H9 M-9 24 H9"/>
+    <circle cy="-56" r="4"/><circle cy="60" r="4"/>
+    <path d="M0 91 L7 99 L0 107 L-7 99Z" class="blue" stroke-width="2.1"/>
+  </g>
+
+  <g id="left-dot-grid" class="decor f-navy" opacity=".72" transform="translate(62 625)">
+    <circle cx="0" cy="0" r="2.2"/><circle cx="20" cy="0" r="2.2"/><circle cx="40" cy="0" r="2.2"/><circle cx="60" cy="0" r="2.2"/><circle cx="80" cy="0" r="2.2"/>
+    <circle cx="0" cy="20" r="2.2"/><circle cx="20" cy="20" r="2.2"/><circle cx="40" cy="20" r="2.2"/><circle cx="60" cy="20" r="2.2"/><circle cx="80" cy="20" r="2.2"/>
+    <circle cx="0" cy="40" r="2.2"/><circle cx="20" cy="40" r="2.2"/><circle cx="40" cy="40" r="2.2"/><circle cx="60" cy="40" r="2.2"/><circle cx="80" cy="40" r="2.2"/>
+    <circle cx="0" cy="60" r="2.2"/><circle cx="20" cy="60" r="2.2"/><circle cx="40" cy="60" r="2.2"/><circle cx="60" cy="60" r="2.2"/><circle cx="80" cy="60" r="2.2"/>
+  </g>
+
+  <g id="floral-and-blue-brush-corner" class="decor" transform="translate(0 707)">
+    <path d="M0 40 C39 26 96 29 154 50 L184 126 C132 117 65 119 0 145Z" fill="#386fa8" opacity=".68" filter="url(#brush)"/>
+    <path d="M0 100 C57 79 118 86 177 113" class="line blue" stroke-width="17" opacity=".35" filter="url(#brush)"/>
+    <path d="M68 220 C75 161 84 106 104 37 M78 178 C49 154 39 127 36 98 M91 135 C116 113 134 89 145 63" class="line black" stroke-width="2.2" filter="url(#rough)"/>
+    <path d="M53 146 C34 139 25 126 27 111 C45 114 58 125 61 141Z M111 112 C124 92 142 85 158 89 C152 108 138 120 119 124Z" class="f-green" opacity=".85"/>
+    <g transform="translate(105 32)" filter="url(#rough)">
+      <circle r="7" class="f-gold"/>
+      <ellipse rx="7" ry="20" cy="-18" fill="none" stroke="#b78024" stroke-width="2"/><ellipse rx="7" ry="20" cy="18" fill="none" stroke="#b78024" stroke-width="2"/><ellipse rx="20" ry="7" cx="-18" fill="none" stroke="#b78024" stroke-width="2"/><ellipse rx="20" ry="7" cx="18" fill="none" stroke="#b78024" stroke-width="2"/>
+    </g>
+  </g>
+
+  <g id="title-brush-underline" class="decor" filter="url(#brush)">
+    <path d="M208 647 C319 638 453 650 586 644" class="line blue" stroke-width="7" stroke-dasharray="212 8 123 5" opacity=".95"/>
+  </g>
+
+  <g id="cta-hand-arrow" class="decor line black" stroke-width="3" filter="url(#rough)">
+    <path d="M519 753 C544 748 565 742 590 730"/>
+    <path d="M519 753 L540 739 M519 753 L542 765"/>
+  </g>
+
+  <g id="bottom-divider-and-center-motif" class="decor">
+    <path d="M238 885 C420 878 625 892 807 884 M917 884 C1118 877 1390 893 1620 884" class="line black" stroke-width="6" stroke-dasharray="196 7 334 9 151" opacity=".9" filter="url(#brush)"/>
+    <g class="line gold" stroke-width="2.2" transform="translate(862 884)" filter="url(#rough)">
+      <path d="M0-27 L27 0 L0 27 L-27 0Z M0-17 L17 0 L0 17 L-17 0Z M-27 0 L-43-16 L-59 0 L-43 16Z M27 0 L43-16 L59 0 L43 16Z"/>
+    </g>
+  </g>
+</svg>
+

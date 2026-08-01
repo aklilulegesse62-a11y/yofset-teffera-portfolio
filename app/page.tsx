@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "./data";
 import { ArtworkCard } from "./ui/ArtworkCard";
-import { BrushUnderline, CTAArrow, HeroDecorations, PortraitPortal } from "./ui/HeroDecorations";
+import { HeroDecorations } from "./ui/HeroDecorations";
 
 export default function Home() {
   const featured = siteContent.artworks.slice(0, 4);
@@ -12,12 +12,10 @@ export default function Home() {
       <div className="hero-copy">
         <p className="eyebrow">Contemporary Ethiopian Artist · Addis Ababa</p>
         <h1>Yofset<br /><em>Teffera</em><br />Tesfaye</h1>
-        <BrushUnderline />
         <p className="location">Identity · Memory · Heritage · Transformation</p>
-        <div className="hero-cta"><Link className="button" href="/works">View selected works <span>↗</span></Link><CTAArrow /></div>
+        <div className="hero-cta"><Link className="button" href="/works">View selected works <span>↗</span></Link></div>
       </div>
       <div className="hero-orbit" aria-hidden="true">
-        <PortraitPortal />
         <span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit orbit-three" />
         <div className="hero-art hero-portrait"><Image unoptimized src={siteContent.portrait} alt="Portrait of Yofset Teffera" fill priority sizes="(max-width: 800px) 68vw, 34vw" /></div>
       </div>
