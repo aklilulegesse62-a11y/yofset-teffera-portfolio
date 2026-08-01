@@ -57,11 +57,34 @@ const rawSiteContent = {
   ] as Artwork[]
 };
 
+const approvedBiography = [
+  "Yofset Teffera is a self-taught contemporary Ethiopian artist based in Addis Ababa, Ethiopia. Although she studied Architecture and worked in different professional fields, she eventually realized that her true calling was painting.",
+  "Choosing to follow her passion, Yofset left her career and dedicated herself entirely to her artistic practice. She spent a year immersed in her studio, creating relentlessly and developing a distinctive visual language. This dedication culminated in her debut solo exhibition, where every artwork was sold on opening night. The success of the exhibition reinforced her commitment to pursuing art as a lifelong career.",
+  "She followed this achievement with a second solo exhibition, where several works were acquired by collectors. Yofset is currently preparing her third solo exhibition, continuing to explore themes of identity, emotion, memory, Ethiopian culture, and spirituality.",
+  "Art has been part of Yofset’s life since childhood. Her father was an artist, and one of her earliest memories is watching him paint her mother while she prepared traditional Ethiopian coffee. Inspired by those moments, she taught herself to draw while learning techniques and artistic values from her father. Those early experiences continue to shape her artistic vision today.",
+];
+
+const approvedStatement = [
+  "My work is rooted in identity, memory, emotion, and the richness of Ethiopian culture. Through painting, I explore the connections between personal experience, heritage, and spirituality, creating works that invite viewers to reflect on their own stories while discovering mine.",
+  "As a self-taught artist, my practice is driven by curiosity, discipline, and a deep emotional connection to painting. Every canvas represents a journey of self-discovery and a dialogue between tradition and contemporary life.",
+  "Growing up in a family of artists taught me that painting is more than an image—it is a way of preserving history, expressing emotion, and creating human connection. My work celebrates Ethiopian identity while exploring universal themes of belonging, resilience, love, and transformation.",
+  "Each exhibition represents a chapter in my evolution as both an artist and a person, documenting the experiences that continue to shape my creative voice.",
+];
+
 export const siteContent = {
   ...rawSiteContent,
+  phone: "+251 912 083 062",
+  biography: approvedBiography,
+  statement: approvedStatement,
   portrait: withBasePath(rawSiteContent.portrait),
   exhibitions: rawSiteContent.exhibitions.map((exhibition, index) => ({
     ...exhibition,
+    date: index === 0 ? "June 15, 2024" : index === 1 ? "December 6, 2026" : exhibition.date,
+    description: index === 0
+      ? "Sefera, meaning ‘Spot,’ marked the beginning of my professional artistic journey. The exhibition explored finding my place in the world through art and featured seven paintings celebrating Ethiopian heritage, culture, traditions, and faith. Every artwork was sold on opening night, making the exhibition a defining milestone in my career."
+      : index === 1
+        ? "Semet, meaning ‘Emotion,’ presented eight paintings exploring the different stages of human emotion. Through expressive imagery and symbolism, the exhibition invited viewers to reflect on emotional transformation, vulnerability, and healing. Several works were acquired by collectors during the exhibition."
+        : exhibition.description,
     poster: index === 0
       ? withBasePath("/images/exhibitions/sefera-spot-poster.png")
       : index === 1

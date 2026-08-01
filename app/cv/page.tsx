@@ -14,6 +14,22 @@ export default function CV() {
       <button className="button disabled" aria-disabled="true">Download CV — PDF <span>Forthcoming</span></button>
     </header>
     <div className="wrap">
+      <section className="cv-section cv-contact-section">
+        <h2>{siteContent.shortName}</h2>
+        <div className="cv-contact-details">
+          <p><span>Email</span><a href={`mailto:${siteContent.email}`}>{siteContent.email}</a></p>
+          <p><span>Phone</span><a href={`tel:${siteContent.phone.replace(/\s/g, "")}`}>{siteContent.phone}</a></p>
+          <p><span>Location</span>{siteContent.location}</p>
+        </div>
+      </section>
+      <section className="cv-section">
+        <h2>Artist Biography</h2>
+        <div className="cv-prose">{siteContent.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </section>
+      <section className="cv-section">
+        <h2>Artist Statement</h2>
+        <div className="cv-prose">{siteContent.statement.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </section>
       <section className="cv-section">
         <h2>Solo Exhibitions</h2>
         <div className="cv-exhibition-list">{siteContent.exhibitions.slice(0, 2).map((exhibition) => <article className="cv-exhibition" key={exhibition.title}>
@@ -21,6 +37,10 @@ export default function CV() {
           <p>{exhibition.date} · {exhibition.venue}, {exhibition.location}</p></div>
           {exhibition.poster && <a href={exhibition.poster} target="_blank" rel="noreferrer" aria-label={`Open ${exhibition.title} exhibition poster`}><Image unoptimized src={exhibition.poster} alt={`${exhibition.title} official exhibition poster`} width={360} height={480} sizes="(max-width: 800px) 45vw, 220px" /></a>}
         </article>)}</div>
+      </section>
+      <section className="cv-section">
+        <h2>Upcoming</h2>
+        <div><h3>Third Solo Exhibition (In Progress)</h3><p>{siteContent.exhibitions[2].description}</p></div>
       </section>
       <section className="cv-section">
         <h2>Press and Publications</h2>
@@ -37,11 +57,11 @@ export default function CV() {
       </section>
       <section className="cv-section">
         <h2>Education</h2>
-        <div><h3>Architecture</h3><p>Institution and dates TBC</p><h3>Self-taught artistic practice</h3></div>
+        <div><h3>Architecture</h3><p>College Education</p><h3>Self-taught artistic practice</h3></div>
       </section>
       <section className="cv-section">
         <h2>Artistic Practice</h2>
-        <div><p>Contemporary painting · Figurative art · Ethiopian cultural narratives · Identity and heritage · Emotion and memory · Spiritual symbolism</p></div>
+        <div className="cv-practice"><span>Contemporary Painting</span><span>Figurative Art</span><span>Ethiopian Cultural Narratives</span><span>Identity and Heritage</span><span>Emotion and Memory</span><span>Spiritual Symbolism</span><p>Based in: {siteContent.location}</p></div>
       </section>
       {empty.map((section) => <section className="cv-section" key={section}><h2>{section}</h2><p>Information forthcoming</p></section>)}
     </div>
