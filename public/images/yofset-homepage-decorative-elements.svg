@@ -23,6 +23,10 @@
       .decor{pointer-events:none}.line{fill:none;stroke-linecap:round;stroke-linejoin:round}
       .navy{stroke:#0b1c2e}.blue{stroke:#386fa8}.gold{stroke:#c79b3a}.black{stroke:#242a31}.sand{stroke:#d8c7a3}
       .f-navy{fill:#0b1c2e}.f-blue{fill:#386fa8}.f-gold{fill:#c79b3a}.f-red{fill:#a83b30}.f-green{fill:#285f4b}.f-sand{fill:#e7ddd0}.f-black{fill:#242a31}
+      .flower-bloom{transform-box:fill-box;transform-origin:center;animation:flowerBloom 7s cubic-bezier(.25,.7,.25,1) infinite}
+      .flower-bloom-delay{animation-delay:-2.3s}.flower-bloom-late{animation-delay:-4.6s}
+      @keyframes flowerBloom{0%,14%{transform:scale(.18) rotate(-8deg);opacity:.2}38%,72%{transform:scale(1) rotate(0);opacity:1}88%,100%{transform:scale(.72) rotate(4deg);opacity:.58}}
+      @media(prefers-reduced-motion:reduce){.flower-bloom{animation:none}}
     </style>
   </defs>
 
@@ -209,19 +213,25 @@
 
     <!-- large cobalt flower -->
     <g transform="translate(120 660)">
+      <g class="flower-bloom">
       <path d="M0 8 C-35-8-45-41-27-58 C-7-48 4-31 7-11 C7-38 20-62 42-67 C57-48 47-23 24-6 C48-23 73-20 82 1 C70 22 43 28 18 16 C36 35 35 58 15 68 C-6 58-13 35-5 15 C-23 34-49 34-61 15 C-53-5-28-13 0 8Z" fill="#315fa3" stroke="#244f8e" stroke-width="3"/>
       <circle cx="7" cy="7" r="13" fill="#c49636"/><path d="M7 7 L-22-35 M7 7 L25-49 M7 7 L58-4 M7 7 L39 40 M7 7 L-37 24" class="line" stroke="#d3a748" stroke-width="2"/>
+      </g>
     </g>
 
     <!-- red lower flower -->
     <g transform="translate(166 806)">
+      <g class="flower-bloom flower-bloom-delay">
       <path d="M0 7 C-28-5-39-31-25-47 C-6-42 5-25 7-9 C9-32 24-48 43-48 C54-29 43-10 24 1 C47-9 68 0 70 19 C54 34 32 32 15 18 C26 38 18 58-2 62 C-19 50-20 28-9 13 C-27 26-49 21-55 3 C-43-14-22-15 0 7Z" fill="#a63d32" stroke="#8e312a" stroke-width="3"/>
       <circle cx="7" cy="8" r="10" fill="#b78632"/><path d="M7 8 L-18-31 M7 8 L29-34 M7 8 L53 14 M7 8 L1 48" class="line" stroke="#c99c43" stroke-width="1.8"/>
+      </g>
     </g>
 
     <!-- small ochre flower -->
     <g transform="translate(281 856)">
+      <g class="flower-bloom flower-bloom-late">
       <circle r="6" fill="#513d31"/><ellipse rx="10" ry="25" cy="-21" fill="#cf9c34"/><ellipse rx="10" ry="25" cy="21" fill="#d3a23b"/><ellipse rx="25" ry="10" cx="-21" fill="#c99730"/><ellipse rx="25" ry="10" cx="21" fill="#d7aa45"/><ellipse rx="9" ry="23" transform="rotate(45) translate(0 -21)" fill="#c79731"/><ellipse rx="9" ry="23" transform="rotate(135) translate(0 -21)" fill="#d2a23b"/>
+      </g>
     </g>
   </g>
 

@@ -81,7 +81,7 @@ export function HeroDecorations() {
   return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
     <defs><clipPath id="heroPortraitClip"><circle cx={1212 + lockedPosition.x} cy={520 + lockedPosition.y} r="197" /></clipPath></defs>
     <image className="front-portrait-motion" href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
-    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=animated-scene-3`} width="1694" height="936" />
+    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=flower-bloom-1`} width="1694" height="936" />
     <g className="front-moving-dots" fill="#386fa8">{movingDots}</g>
     <g className="front-rotating-rings" fill="none" strokeLinecap="round"><circle cx="1222" cy="526" r="238" stroke="#386fa8" strokeWidth="3" strokeDasharray="170 18 92 12"/><circle cx="1222" cy="526" r="266" stroke="#c79b3a" strokeWidth="2" strokeDasharray="4 11"/></g>
     <g transform="translate(420 405)"><g className="front-travelling-waves" fill="none" stroke="#c79b3a" strokeWidth="1.5" strokeLinecap="round"><path d="M0 0 C80-46 136 50 216 3 S358-39 438 10"/><path d="M0 35 C80-11 136 85 216 38 S358-4 438 45"/><path d="M0 70 C80 24 136 120 216 73 S358 31 438 80"/></g></g>
