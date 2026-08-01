@@ -25,6 +25,16 @@ const rawSiteContent = {
     {amharic:"ስሜት",title:"Semet / Emotion",date:"December 6–December 27 · Year TBC",venue:"Atmosphere",location:"Addis Ababa, Ethiopia",description:"Semet, meaning ‘Emotion,’ presented eight paintings exploring different stages of human emotion. Through expressive imagery and symbolism, the exhibition invited viewers to reflect on emotional transformation, vulnerability and healing. Several works were acquired by collectors.",context:""},
     {amharic:"",title:"Third Solo Exhibition",date:"In progress",venue:"Venue TBC",location:"Addis Ababa, Ethiopia",description:"Yofset Teffera is currently developing her third solo exhibition, continuing her exploration of identity, emotion, memory and contemporary Ethiopian visual storytelling.",context:""}
   ],
+  press: [
+    {
+      title: "Ababa Tesfaye’s Legacy Continues: Granddaughter Yofset Teffera Tesfaye Debuts Art Exhibition Featuring Original Artwork from Iconic Show",
+      publication: "Social Addis",
+      date: "June 2024",
+      description: "Press release announcing Yofset Teffera Tesfaye’s debut exhibition, Sefera / Spot, at Social Addis from June 15 to July 15, 2024.",
+      image: "/images/press/sefera-press-release.png",
+      alt: "Social Addis press release for Yofset Teffera Tesfaye’s Sefera exhibition",
+    },
+  ],
   artworks: [
     {slug:"untitled-01",title:"Untitled 01",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-01/_CLP9883.jpg",alt:"Four brightly coloured faces surrounded by flowers against a dark ground",category:"Paintings",details:["/images/artworks/project-01/_CLP9884.jpg","/images/artworks/project-01/_CLP9885.jpg","/images/artworks/project-01/_CLP9886.jpg","/images/artworks/project-01/_CLP9887.jpg"]},
     {slug:"untitled-02",title:"Untitled 02",year:"Year TBC",medium:"Medium TBC",dimensions:"Dimensions TBC",description:"Details forthcoming",image:"/images/artworks/project-02/_CLP9880.jpg",alt:"Black-and-white figurative composition encircled by piano keys",category:"Paintings",details:["/images/artworks/project-02/_CLP9882.jpg"]},
@@ -50,6 +60,7 @@ const rawSiteContent = {
 export const siteContent = {
   ...rawSiteContent,
   portrait: withBasePath(rawSiteContent.portrait),
+  press: rawSiteContent.press.map((item) => ({...item, image: withBasePath(item.image)})),
   artworks: rawSiteContent.artworks.map((artwork) => ({
     ...artwork,
     image: withBasePath(artwork.image),

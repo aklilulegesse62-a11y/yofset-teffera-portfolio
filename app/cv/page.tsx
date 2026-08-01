@@ -1,4 +1,48 @@
-import type{Metadata}from"next";import{siteContent}from"../data";
-export const metadata:Metadata={title:"CV"};
-const empty=["Group Exhibitions","Projects and Commissions","Awards and Grants","Press and Publications"];
-export default function CV(){return <main id="main"><header className="page-hero wrap"><p className="eyebrow">Curriculum vitae</p><h1>Artist <em>CV</em></h1><button className="button disabled" aria-disabled="true">Download CV — PDF <span>Forthcoming</span></button></header><div className="wrap"><section className="cv-section"><h2>Solo Exhibitions</h2><div>{siteContent.exhibitions.slice(0,2).map(e=><article key={e.title}><h3>{e.title}</h3><p>{e.date} · {e.venue}, {e.location}</p></article>)}</div></section><section className="cv-section"><h2>Education</h2><div><h3>Architecture</h3><p>Institution and dates TBC</p><h3>Self-taught artistic practice</h3></div></section><section className="cv-section"><h2>Artistic Practice</h2><div><p>Contemporary painting · Figurative art · Ethiopian cultural narratives · Identity and heritage · Emotion and memory · Spiritual symbolism</p></div></section>{empty.map(s=><section className="cv-section" key={s}><h2>{s}</h2><p>Information forthcoming</p></section>)}</div></main>}
+import type { Metadata } from "next";
+import Image from "next/image";
+import { siteContent } from "../data";
+
+export const metadata: Metadata = { title: "CV" };
+
+const empty = ["Group Exhibitions", "Projects and Commissions", "Awards and Grants"];
+
+export default function CV() {
+  return <main id="main">
+    <header className="page-hero wrap">
+      <p className="eyebrow">Curriculum vitae</p>
+      <h1>Artist <em>CV</em></h1>
+      <button className="button disabled" aria-disabled="true">Download CV — PDF <span>Forthcoming</span></button>
+    </header>
+    <div className="wrap">
+      <section className="cv-section">
+        <h2>Solo Exhibitions</h2>
+        <div>{siteContent.exhibitions.slice(0, 2).map((exhibition) => <article key={exhibition.title}>
+          <h3>{exhibition.title}</h3>
+          <p>{exhibition.date} · {exhibition.venue}, {exhibition.location}</p>
+        </article>)}</div>
+      </section>
+      <section className="cv-section">
+        <h2>Press and Publications</h2>
+        <div className="press-list">{siteContent.press.map((item) => <article className="press-entry" key={item.title}>
+          <div>
+            <p className="press-meta">{item.publication} · {item.date}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+          <a href={item.image} target="_blank" rel="noreferrer" aria-label={`Open full press release: ${item.title}`}>
+            <Image src={item.image} alt={item.alt} width={989} height={1348} sizes="(max-width: 800px) 100vw, 520px" />
+          </a>
+        </article>)}</div>
+      </section>
+      <section className="cv-section">
+        <h2>Education</h2>
+        <div><h3>Architecture</h3><p>Institution and dates TBC</p><h3>Self-taught artistic practice</h3></div>
+      </section>
+      <section className="cv-section">
+        <h2>Artistic Practice</h2>
+        <div><p>Contemporary painting · Figurative art · Ethiopian cultural narratives · Identity and heritage · Emotion and memory · Spiritual symbolism</p></div>
+      </section>
+      {empty.map((section) => <section className="cv-section" key={section}><h2>{section}</h2><p>Information forthcoming</p></section>)}
+    </div>
+  </main>;
+}
