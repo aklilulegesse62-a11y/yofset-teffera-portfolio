@@ -2,13 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "./data";
 import { ArtworkCard } from "./ui/ArtworkCard";
-import { HeroDecorations } from "./ui/HeroDecorations";
 
 export default function Home() {
   const featured = siteContent.artworks.slice(0, 4);
   return <main id="main">
     <section className="hero wrap">
-      <HeroDecorations />
       <div className="hero-copy">
         <p className="eyebrow">Contemporary Ethiopian Artist · Addis Ababa</p>
         <h1>Yofset<br /><em>Teffera</em><br />Tesfaye</h1>
