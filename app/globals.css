@@ -53,6 +53,21 @@
 .exhibition-preview .ex-row{grid-template-columns:56px 170px minmax(0,1fr) 220px 30px;padding-block:22px}.ex-poster{height:210px;background:#eeeae1;overflow:hidden;display:grid;place-items:center}.ex-poster img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}.ex-row:hover .ex-poster img{transform:scale(1.025)}
 @media(max-width:800px){.exhibition-preview .ex-row{grid-template-columns:28px 92px minmax(0,1fr) 20px;gap:14px}.ex-poster{height:118px}.exhibition-preview .ex-row p{display:none}.exhibition-preview .ex-row h3{font-size:24px}.exhibition-preview .ex-row h3 small{font-size:9px}}
 
+/* Restrained shared ornament for inner pages. */
+.site-decorations{position:fixed;z-index:0;inset:78px 0 0;overflow:hidden;pointer-events:none;opacity:.46}
+.site-decorations svg{display:block;width:100%;height:100%}
+.site-decor-orbits{fill:var(--blue);opacity:.55;transform-origin:340px 235px;animation:site-orbit-turn 80s linear infinite}
+.site-decor-arches{stroke:var(--gold);stroke-width:1.4;opacity:.72}
+.site-decor-waves{stroke:var(--gold);stroke-width:1.2;opacity:.52}
+.site-decor-motif{stroke:var(--navy);stroke-width:1.6;opacity:.38}
+.site-decor-motif path:first-child{stroke:var(--gold);stroke-width:2}
+.site-decor-spark{stroke:var(--gold);stroke-width:2;opacity:.66;animation:site-symbol-float 8s ease-in-out infinite}
+body:has(.hero) .site-decorations{display:none}
+body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
+@keyframes site-orbit-turn{to{transform:rotate(360deg)}}
+@keyframes site-symbol-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:800px){.site-decorations{opacity:.28}.site-decor-waves,.site-decor-motif path:last-child{display:none}.site-decor-orbits{transform:translate(-190px,-30px) scale(.78);transform-origin:340px 235px}.site-decor-arches{transform:translate(180px,-30px) scale(.82)}}
+
 /* Homepage hero — handmade graphic language drawn as reusable inline SVG. */
 .hero{position:relative;isolation:isolate;overflow:visible}
 .hero-copy,.hero-orbit{position:relative;z-index:2}
@@ -60,8 +75,13 @@
 .hero-handmade{position:absolute;z-index:0;left:50%;top:0;width:100vw;height:100%;transform:translateX(-50%);overflow:hidden;pointer-events:none}
 .hero-sketch-layer{display:block;width:100%;height:100%;overflow:visible}
 .hero-supplied-overlay{top:-78px;height:calc(100% + 78px)}
-.hero-supplied-overlay+.hero-copy~.hero-orbit{transform:translateX(clamp(0px,calc((100vw - 1200px)*.22),105px))}
-.hero-supplied-overlay+.hero-copy~.hero-orbit .hero-art.hero-portrait{width:55%;box-shadow:0 0 0 2px rgba(247,244,237,.95)}
+.hero-supplied-overlay~.hero-orbit{visibility:hidden;pointer-events:none}
+.hero-supplied-overlay.portrait-adjusting{pointer-events:auto;z-index:12}
+.portrait-drag-target{fill:rgba(23,107,156,.06);stroke:var(--gold);stroke-width:3;stroke-dasharray:12 8;cursor:grab;pointer-events:all;touch-action:none}
+.portrait-drag-target:active{cursor:grabbing;fill:rgba(23,107,156,.12)}
+.portrait-drag-target:focus-visible{outline:none;stroke:var(--blue);stroke-width:5}
+.portrait-adjust-panel{position:fixed;z-index:30;right:22px;bottom:22px;width:260px;padding:16px;background:var(--navy);color:white;box-shadow:0 16px 45px rgba(7,28,44,.28);font:12px var(--sans);pointer-events:auto}
+.portrait-adjust-panel strong,.portrait-adjust-panel span,.portrait-adjust-panel output{display:block}.portrait-adjust-panel strong{text-transform:uppercase;letter-spacing:.12em}.portrait-adjust-panel span{margin:6px 0 12px;color:#b9c2c8}.portrait-adjust-panel output{padding:9px;background:rgba(255,255,255,.08);font-variant-numeric:tabular-nums}.portrait-adjust-panel div{display:flex;gap:8px;margin-top:10px}.portrait-adjust-panel button{flex:1;border:1px solid rgba(255,255,255,.35);background:transparent;color:white;padding:8px;cursor:pointer}.portrait-adjust-panel button:hover{background:white;color:var(--navy)}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}
 .floral-corner{transform:translate(-2px,8px)}
 .symbol-cluster{animation:hero-symbol-breathe 9s ease-in-out infinite}
@@ -85,4 +105,4 @@
 @keyframes arrow-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-7px)}}
 @media(max-width:1100px){.female-profile{transform:translate(-68px,52px) scale(.92)}.symbol-cluster{transform:translate(-30px,8px)}.hero-copy{padding-left:20px}.portrait-portal{width:112%;height:112%;left:-6%;top:-6%}}
 @media(max-width:800px){.hero{overflow:hidden;padding-top:70px}.hero-copy{padding-left:0}.hero-handmade{height:100%}.hero-supplied-overlay{top:-76px;height:calc(100% + 76px);opacity:.7}.hero-supplied-overlay+.hero-copy~.hero-orbit{transform:none}.hero-supplied-overlay+.hero-copy~.hero-orbit .hero-art.hero-portrait{width:64%}.female-profile,.radial-rhythm,.brush-divider{display:none}.floral-corner{transform:translate(-20px,60px) scale(.72);transform-origin:left bottom;opacity:.7}.symbol-cluster{transform:translate(-300px,18px) scale(.72);transform-origin:center top}.ethiopian-motif{transform:translate(-210px,0) scale(.78);transform-origin:center bottom}.brush-underline{width:62%;margin-top:-18px}.cta-sketch-arrow{width:70px}.portrait-portal{width:120%;height:120%;left:-10%;top:-10%}}
-@media(max-width:520px){.hero-supplied-overlay{display:none}.symbol-cluster{display:none}.floral-corner{opacity:.48}.ethiopian-motif{display:none}.hero .location{max-width:100%;font-size:9px;letter-spacing:.055em;white-space:normal;line-height:1.6}.hero-cta{gap:7px}.cta-sketch-arrow{width:48px}.hero .button{min-width:225px;gap:20px}}
+@media(max-width:520px){.hero-supplied-overlay{display:none}.hero-supplied-overlay~.hero-orbit{visibility:visible}.symbol-cluster{display:none}.floral-corner{opacity:.48}.ethiopian-motif{display:none}.hero .location{max-width:100%;font-size:9px;letter-spacing:.055em;white-space:normal;line-height:1.6}.hero-cta{gap:7px}.cta-sketch-arrow{width:48px}.hero .button{min-width:225px;gap:20px}}

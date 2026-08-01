@@ -1,4 +1,7 @@
-import { withBasePath } from "../data";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { siteContent, withBasePath } from "../data";
 
 const palette = ["#071C2C", "#176B9C", "#2D8BA5", "#C6A04A", "#303436"];
 
@@ -72,7 +75,60 @@ export function BrushDivider() {
 }
 
 export function HeroDecorations() {
-  return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice"><image href={withBasePath("/images/yofset-homepage-decorative-elements.svg")} width="1694" height="936" /></svg></div>;
+  const [editing, setEditing] = useState(false);
+  const [position, setPosition] = useState({x:0,y:0});
+  const [copied, setCopied] = useState(false);
+  const drag = useRef<{clientX:number;clientY:number;x:number;y:number}|null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    // The adjustment UI is intentionally activated from the browser URL.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setEditing(params.get("adjust") === "portrait");
+    const saved = window.localStorage.getItem("yofsetPortraitPosition");
+    if (saved) {
+      try { setPosition(JSON.parse(saved)); } catch { /* Ignore invalid local preview data. */ }
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("yofsetPortraitPosition", JSON.stringify(position));
+  }, [position]);
+
+  useEffect(() => {
+    if (!editing) return;
+    const onKeyDown = (event:KeyboardEvent) => {
+      const amount = event.shiftKey ? 10 : 1;
+      if (!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key)) return;
+      event.preventDefault();
+      setPosition((current) => ({
+        x: current.x + (event.key === "ArrowLeft" ? -amount : event.key === "ArrowRight" ? amount : 0),
+        y: current.y + (event.key === "ArrowUp" ? -amount : event.key === "ArrowDown" ? amount : 0),
+      }));
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [editing]);
+
+  const copyPosition = async () => {
+    await navigator.clipboard.writeText(`Portrait position: x ${position.x}, y ${position.y}`);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1400);
+  };
+
+  return <><div className={`hero-handmade hero-supplied-overlay${editing ? " portrait-adjusting" : ""}`} aria-hidden={!editing}><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
+    <defs><clipPath id="heroPortraitClip"><circle cx={1212 + position.x} cy={520 + position.y} r="197" /></clipPath></defs>
+    <image href={siteContent.portrait} x={1015 + position.x} y={323 + position.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
+    <image href={withBasePath("/images/yofset-homepage-decorative-elements.svg")} width="1694" height="936" />
+    {editing && <circle className="portrait-drag-target" cx={1212 + position.x} cy={520 + position.y} r="197" tabIndex={0}
+      onPointerDown={(event) => { drag.current={clientX:event.clientX,clientY:event.clientY,x:position.x,y:position.y}; event.currentTarget.setPointerCapture(event.pointerId); }}
+      onPointerMove={(event) => { if (!drag.current) return; const scale=1694/event.currentTarget.ownerSVGElement!.getBoundingClientRect().width; setPosition({x:Math.round(drag.current.x+(event.clientX-drag.current.clientX)*scale),y:Math.round(drag.current.y+(event.clientY-drag.current.clientY)*scale)}); }}
+      onPointerUp={() => { drag.current=null; }} />}
+  </svg></div>{editing && <div className="portrait-adjust-panel" role="group" aria-label="Portrait position controls">
+    <strong>Adjust portrait</strong><span>Drag the circle or use arrow keys</span>
+    <output>X {position.x} &nbsp; Y {position.y}</output>
+    <div><button type="button" onClick={() => setPosition({x:0,y:0})}>Reset</button><button type="button" onClick={copyPosition}>{copied ? "Copied" : "Copy values"}</button></div>
+  </div>}</>;
 }
 
 export function BrushUnderline() {

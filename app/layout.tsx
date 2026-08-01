@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./ui/Header";
 import { Footer } from "./ui/Footer";
+import { SiteDecorations } from "./ui/SiteDecorations";
 
 const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -15,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header/>{children}<Footer/></body></html>;
+  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><SiteDecorations/><Header/>{children}<Footer/></body></html>;
 }

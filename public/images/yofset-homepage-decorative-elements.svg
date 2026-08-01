@@ -70,7 +70,6 @@
   <g id="portrait-portal" class="decor" transform="translate(1210 524)">
     <circle r="273" class="line sand" stroke-width="1.4" opacity=".72"/>
     <circle r="247" class="line gold" stroke-width="1.2" opacity=".62"/>
-    <circle r="197" class="line sand" stroke-width="2.4" stroke-dasharray="154 11 260 7" filter="url(#rough)" opacity=".86"/>
   </g>
 
   <!-- Exact black-and-blue brush ring isolated from the user's approved reference. -->
@@ -255,4 +254,3 @@
     </g>
   </g>
 </svg>
-
