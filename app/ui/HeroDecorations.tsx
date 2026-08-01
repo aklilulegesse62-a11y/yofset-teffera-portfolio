@@ -86,6 +86,10 @@ export function HeroDecorations() {
     <g className="front-rotating-rings" fill="none" strokeLinecap="round"><circle cx="1222" cy="526" r="238" stroke="#386fa8" strokeWidth="3" strokeDasharray="170 18 92 12"/><circle cx="1222" cy="526" r="266" stroke="#c79b3a" strokeWidth="2" strokeDasharray="4 11"/></g>
     <g transform="translate(420 405)"><g className="front-travelling-waves" fill="none" stroke="#c79b3a" strokeWidth="1.5" strokeLinecap="round"><path d="M0 0 C80-46 136 50 216 3 S358-39 438 10"/><path d="M0 35 C80-11 136 85 216 38 S358-4 438 45"/><path d="M0 70 C80 24 136 120 216 73 S358 31 438 80"/></g></g>
     <g transform="translate(1535 260)"><g className="front-door" fill="none" stroke="#c79b3a" strokeWidth="1.8" strokeLinecap="round"><path d="M-84 176 V-38 A84 84 0 0 1 84-38 V176"/><path d="M-58 176 V-27 A58 58 0 0 1 58-27 V176"/><path d="M-31 176 V-15 A31 31 0 0 1 31-15 V176" strokeDasharray="7 8"/></g></g>
+    <g transform="translate(207 166) rotate(-8)"><g className="front-star" fill="none" stroke="#071c2c" strokeWidth="3.1" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M0-27 L7-7 L26-17 L13 2 L31 8 L10 11 L20 31 L0 16 L-17 32 L-9 10 L-31 6 L-10-2 L-24-20 L-5-10Z"/>
+      <path d="M-19-25 L15 27 M20-22 L-13 25" opacity=".72"/>
+    </g></g>
     <g transform="translate(935 170)"><g className="front-sun" fill="none" stroke="#c79b3a" strokeWidth="2.2" strokeLinecap="round">
       <circle r="18"/><path d="M0-28V-40 M0 28V40 M-28 0H-40 M28 0H40 M-20-20L-29-29 M20-20L29-29 M-20 20L-29 29 M20 20L29 29"/>
     </g></g>
