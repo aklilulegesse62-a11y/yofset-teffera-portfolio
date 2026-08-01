@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header/>{children}<Footer/></body></html>;
+  return <html lang="en"><body><div className="art-atmosphere" aria-hidden="true"><span className="art-brush art-brush-rust"/><span className="art-brush art-brush-gold"/><span className="art-arc art-arc-one"/><span className="art-arc art-arc-two"/><span className="art-dots art-dots-one"/><span className="art-dots art-dots-two"/></div><a className="skip-link" href="#main">Skip to content</a><Header/>{children}<Footer/></body></html>;
 }
