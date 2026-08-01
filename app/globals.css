@@ -54,7 +54,7 @@
 @media(max-width:800px){.exhibition-preview .ex-row{grid-template-columns:28px 92px minmax(0,1fr) 20px;gap:14px}.ex-poster{height:118px}.exhibition-preview .ex-row p{display:none}.exhibition-preview .ex-row h3{font-size:24px}.exhibition-preview .ex-row h3 small{font-size:9px}}
 
 /* Restrained shared ornament for inner pages. */
-.site-decorations{position:fixed;z-index:0;inset:78px 0 0;overflow:hidden;pointer-events:none;opacity:.46}
+.site-decorations{position:fixed;z-index:0;inset:78px 0 0;overflow:hidden;pointer-events:none;opacity:.68}
 .site-decorations svg{display:block;width:100%;height:100%}
 .site-decor-orbits{fill:var(--blue);opacity:.55;transform-origin:340px 235px;animation:site-orbit-turn 80s linear infinite}
 .site-decor-orbits circle{transform-box:fill-box;transform-origin:center;animation:site-dot-pulse 4.8s ease-in-out infinite}.site-decor-orbits circle:nth-child(3n){animation-delay:-1.6s}.site-decor-orbits circle:nth-child(4n){animation-delay:-3.2s}
@@ -65,7 +65,7 @@
 .site-decor-motif{stroke:var(--navy);stroke-width:1.6;opacity:.38}
 .site-decor-motif path:first-child{stroke:var(--gold);stroke-width:2}
 .site-decor-spark{stroke:var(--gold);stroke-width:2;opacity:.66;animation:site-symbol-float 8s ease-in-out infinite}
-body:has(.hero) .site-decorations{opacity:.16}
+body:has(.hero) .site-decorations{opacity:.3}
 body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 @keyframes site-orbit-turn{to{transform:rotate(360deg)}}
 @keyframes site-symbol-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -75,7 +75,7 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 @keyframes site-circle-breathe{0%,100%{transform:scale(.82);opacity:.25}50%{transform:scale(1.12);opacity:.75}}
 @keyframes site-stem-grow{0%,12%{stroke-dashoffset:190}38%,82%{stroke-dashoffset:0}100%{stroke-dashoffset:-190}}
 @keyframes site-flower-bloom{0%,18%{transform:scale(.05) rotate(-22deg);opacity:0}42%,78%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.72) rotate(8deg);opacity:0}}
-@media(max-width:800px){.site-decorations{opacity:.28}.site-decor-waves,.site-decor-motif path:last-child,.site-decor-circles{display:none}.site-decor-orbits{transform:translate(-190px,-30px) scale(.78);transform-origin:340px 235px}.site-decor-arches{transform:translate(180px,-30px) scale(.82)}.site-decor-flower{transform:translate(70px,730px) scale(.75)}}
+@media(max-width:800px){.site-decorations{opacity:.4}.site-decor-waves,.site-decor-motif path:last-child,.site-decor-circles{display:none}.site-decor-orbits{transform:translate(-190px,-30px) scale(.78);transform-origin:340px 235px}.site-decor-arches{transform:translate(180px,-30px) scale(.82)}.site-decor-flower{transform:translate(70px,730px) scale(.75)}}
 
 /* Homepage hero — handmade graphic language drawn as reusable inline SVG. */
 .hero{position:relative;isolation:isolate;overflow:visible}
@@ -85,6 +85,13 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .hero-sketch-layer{display:block;width:100%;height:100%;overflow:visible}
 .hero-supplied-overlay{top:-78px;height:calc(100% + 78px)}
 .hero-supplied-overlay~.hero-orbit{visibility:hidden;pointer-events:none}
+.front-sun{transform-box:fill-box;transform-origin:center;animation:front-sun-orbit 13s linear infinite,front-sun-breathe 4.6s ease-in-out infinite}
+.front-moon{transform-box:fill-box;transform-origin:50% 0;animation:front-moon-swing 5.5s ease-in-out infinite}
+.front-eye-shape{transform-box:fill-box;transform-origin:center;animation:front-eye-blink 5s ease-in-out infinite}
+@keyframes front-sun-orbit{to{transform:rotate(360deg)}}
+@keyframes front-sun-breathe{0%,100%{scale:.88;opacity:.72}50%{scale:1.12;opacity:1}}
+@keyframes front-moon-swing{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
+@keyframes front-eye-blink{0%,87%,100%{transform:scaleY(1)}91%,95%{transform:scaleY(.06)}}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}
 .floral-corner{transform:translate(-2px,8px)}
 .symbol-cluster{animation:hero-symbol-breathe 9s ease-in-out infinite}

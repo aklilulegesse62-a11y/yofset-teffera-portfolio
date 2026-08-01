@@ -76,7 +76,16 @@ export function HeroDecorations() {
   return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
     <defs><clipPath id="heroPortraitClip"><circle cx={1212 + lockedPosition.x} cy={520 + lockedPosition.y} r="197" /></clipPath></defs>
     <image href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
-    <image href={withBasePath("/images/yofset-homepage-decorative-elements.svg")} width="1694" height="936" />
+    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=animated-symbols-2`} width="1694" height="936" />
+    <g transform="translate(935 170)"><g className="front-sun" fill="none" stroke="#c79b3a" strokeWidth="2.2" strokeLinecap="round">
+      <circle r="18"/><path d="M0-28V-40 M0 28V40 M-28 0H-40 M28 0H40 M-20-20L-29-29 M20-20L29-29 M-20 20L-29 29 M20 20L29 29"/>
+    </g></g>
+    <g transform="translate(840 222)"><g className="front-moon" fill="#386fa8" stroke="#386fa8" strokeWidth="2" strokeLinecap="round">
+      <path d="M14-28 C-9-25-22-5-17 16 C-12 37 11 48 31 38 C14 35 2 20 3 3 C4-9 8-19 14-28Z"/>
+    </g></g>
+    <g className="front-eye" transform="translate(793 318)">
+      <g className="front-eye-shape" fill="none" stroke="#0b1c2e" strokeWidth="2.8" strokeLinecap="round"><path d="M-28 0 Q0-21 28 0 Q0 21-28 0Z"/><circle r="8" fill="#c79b3a" stroke="none"/><path d="M0-29V-21 M-14-25L-10-18 M14-25L10-18" strokeWidth="2"/></g>
+    </g>
   </svg></div>;
 }
 
