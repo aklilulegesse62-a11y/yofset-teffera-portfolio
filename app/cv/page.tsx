@@ -51,7 +51,7 @@ export default function CV() {
             <p>{item.description}</p>
           </div>
           <a href={item.image} target="_blank" rel="noreferrer" aria-label={`Open full press release: ${item.title}`}>
-            <Image src={item.image} alt={item.alt} width={989} height={1348} sizes="(max-width: 800px) 100vw, 520px" />
+            <Image unoptimized src={item.image} alt={item.alt} width={989} height={1348} sizes="(max-width: 800px) 100vw, 520px" />
           </a>
         </article>)}</div>
       </section>
