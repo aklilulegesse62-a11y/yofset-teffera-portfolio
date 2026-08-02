@@ -29,15 +29,11 @@
       .simple-flower-leaf{transform-box:fill-box;transform-origin:center bottom;animation:simpleLeafOpen 7s ease-in-out infinite}
       .simple-flower-leaf-right{animation-delay:.35s}
       .scribble-star-motion{transform-box:fill-box;transform-origin:center;animation:scribbleStarSpin 8s ease-in-out infinite}
-      .splash-motion{transform-box:fill-box;transform-origin:center;animation:splashPulse 6s ease-in-out infinite}
-      .splash-halo-motion{transform-box:fill-box;transform-origin:center;animation:splashHaloDrift 12s ease-in-out infinite}
       @keyframes flowerBloom{0%,14%{transform:scale(.12) rotate(-8deg);opacity:0}38%,72%{transform:scale(1) rotate(0);opacity:1}90%,100%{transform:scale(.5) rotate(4deg);opacity:0}}
       @keyframes simpleStemGrow{0%,8%{stroke-dashoffset:180;opacity:.25}30%,78%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-180;opacity:.25}}
       @keyframes simpleLeafOpen{0%,18%{transform:scale(.08) rotate(-12deg);opacity:0}38%,78%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.72) rotate(6deg);opacity:.45}}
       @keyframes scribbleStarSpin{0%,100%{transform:rotate(-8deg) scale(.88);opacity:.65}50%{transform:rotate(22deg) scale(1.15);opacity:1}}
-      @keyframes splashPulse{0%,100%{scale:.92;translate:-5px 7px;opacity:.48}50%{scale:1.08;translate:7px -6px;opacity:.95}}
-      @keyframes splashHaloDrift{0%,100%{scale:.96;rotate:-2deg;opacity:.5}50%{scale:1.04;rotate:2deg;opacity:.9}}
-      @media(prefers-reduced-motion:reduce){.flower-bloom,.simple-flower-stem,.simple-flower-leaf,.scribble-star-motion,.splash-motion,.splash-halo-motion{animation:none}}
+      @media(prefers-reduced-motion:reduce){.flower-bloom,.simple-flower-stem,.simple-flower-leaf,.scribble-star-motion{animation:none}}
     </style>
   </defs>
 
@@ -88,7 +84,7 @@
     <path d="M-281 190 C-227 266-141 320-37 337 C77 356 189 327 269 257" class="line black" stroke-width="4" stroke-linecap="round" stroke-dasharray=".1 13" opacity=".78"/>
   </g>
 
-  <g id="paint-splatter" class="decor splash-motion" transform="translate(1210 524)" opacity=".8">
+  <g id="paint-splatter" class="decor" transform="translate(1210 524)" opacity=".8">
     <g class="f-blue">
       <circle cx="-302" cy="-78" r="3"/><circle cx="-289" cy="-101" r="1.5"/><circle cx="-270" cy="-117" r="2.2"/><circle cx="-247" cy="-132" r="1.2"/><circle cx="-233" cy="-151" r="2.6"/><circle cx="-211" cy="-168" r="1.5"/><circle cx="-193" cy="-184" r="1.1"/><circle cx="-168" cy="-196" r="2.3"/><circle cx="-147" cy="-208" r="1.4"/>
       <circle cx="-277" cy="122" r="2.8"/><circle cx="-255" cy="145" r="1.2"/><circle cx="-232" cy="168" r="2.2"/><circle cx="-209" cy="187" r="1.5"/><circle cx="-183" cy="204" r="3.1"/><circle cx="-158" cy="221" r="1.2"/><circle cx="-132" cy="232" r="2.1"/>
@@ -105,7 +101,7 @@
   </g>
 
   <!-- Dense, irregular spray-paint halo matching the approved circle reference. -->
-  <g id="dense-paint-spray-halo" class="decor splash-halo-motion" transform="translate(1210 524)" opacity=".82">
+  <g id="dense-paint-spray-halo" class="decor" transform="translate(1210 524)" opacity=".82">
     <!-- upper-right cobalt mist -->
     <g class="f-blue">
       <circle cx="119" cy="-331" r="1.2"/><circle cx="137" cy="-342" r="2.1"/><circle cx="153" cy="-322" r=".8"/><circle cx="168" cy="-351" r="1.5"/><circle cx="181" cy="-310" r="2.7"/>
