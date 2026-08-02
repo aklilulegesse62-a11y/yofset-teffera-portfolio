@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteContent } from "./data";
 import { ArtworkCard } from "./ui/ArtworkCard";
-import { HeroDecorations } from "./ui/HeroDecorations";
+import { CTAArrow, HeroDecorations } from "./ui/HeroDecorations";
 
 export default function Home() {
   const featured = siteContent.artworks.slice(0, 4);
@@ -13,7 +13,7 @@ export default function Home() {
         <p className="eyebrow">Contemporary Ethiopian Artist · Addis Ababa</p>
         <h1>Yofset<br /><em>Teffera</em><br />Tesfaye</h1>
         <p className="location">Identity · Memory · Heritage · Transformation</p>
-        <div className="hero-cta"><Link className="button" href="/works">View selected works <span>↗</span></Link></div>
+        <div className="hero-cta"><Link className="button" href="/works">View selected works <span>↗</span></Link><CTAArrow /></div>
       </div>
       <div className="hero-orbit" aria-hidden="true">
         <span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit orbit-three" />

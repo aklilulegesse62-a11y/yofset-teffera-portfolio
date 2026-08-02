@@ -95,7 +95,9 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .front-moving-dots circle:nth-child(4n){animation-delay:-3s}
 .front-moving-dots circle:nth-child(5n){animation-delay:-.75s}
 .front-rotating-rings{transform-origin:1222px 526px;animation:front-ring-turn 38s linear infinite}
-.front-travelling-waves{stroke-dasharray:520;animation:front-wave-travel 14s linear infinite,front-wave-draw 7s ease-in-out infinite}
+.front-wave-loop{opacity:.62;animation:front-wave-rise 4.8s ease-in-out infinite}
+.front-travelling-waves{animation:front-wave-loop 18s linear infinite}
+.front-travelling-waves path{stroke-dasharray:14 8;animation:front-wave-dash 4s linear infinite}
 .front-door{stroke-dasharray:520;transform-box:fill-box;transform-origin:center bottom;animation:front-door-draw 10s ease-in-out infinite,front-door-breathe 6s ease-in-out infinite}
 @keyframes front-sun-orbit{to{transform:rotate(360deg)}}
 @keyframes front-sun-breathe{0%,100%{scale:.88;opacity:.72}50%{scale:1.12;opacity:1}}
@@ -105,8 +107,9 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 @keyframes front-dot-orbit{to{transform:rotate(360deg)}}
 @keyframes front-dot-scale{0%,100%{transform:scale(.55);opacity:.3}50%{transform:scale(1.5);opacity:.9}}
 @keyframes front-ring-turn{to{transform:rotate(360deg)}}
-@keyframes front-wave-travel{0%{transform:translateX(-520px)}100%{transform:translateX(720px)}}
-@keyframes front-wave-draw{0%,100%{stroke-dashoffset:520;opacity:.15}45%,70%{stroke-dashoffset:0;opacity:.72}}
+@keyframes front-wave-loop{from{transform:translateX(0)}to{transform:translateX(1200px)}}
+@keyframes front-wave-dash{to{stroke-dashoffset:-44}}
+@keyframes front-wave-rise{0%,100%{translate:0 -15px}50%{translate:0 15px}}
 @keyframes front-door-draw{0%,12%{stroke-dashoffset:520;opacity:.2}42%,82%{stroke-dashoffset:0;opacity:.82}100%{stroke-dashoffset:-520;opacity:.2}}
 @keyframes front-door-breathe{0%,100%{transform:scale(.985)}50%{transform:scale(1.018)}}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}
@@ -123,7 +126,7 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .brush-underline{display:block;width:min(350px,75%);height:18px;margin:-25px 0 20px 3px;overflow:visible}
 .brush-underline path:first-child{stroke-dashoffset:0;animation:brush-reveal 1.4s cubic-bezier(.2,.7,.2,1) both}
 .hero-cta{display:flex;align-items:center;gap:14px}
-.cta-sketch-arrow{width:92px;height:42px;overflow:visible;animation:arrow-nudge 3.8s ease-in-out infinite}
+.cta-sketch-arrow{width:92px;height:42px;overflow:visible;flex:0 0 auto;transform:translate(-3px,1px);animation:arrow-nudge 3.8s ease-in-out infinite}
 @keyframes halo-turn{to{transform:rotate(360deg)}}
 @keyframes portal-drift{0%{transform:rotate(-1.2deg) scale(.995)}100%{transform:rotate(1.5deg) scale(1.012)}}
 @keyframes rhythm-breathe{0%,100%{opacity:.62;transform:rotate(-1deg)}50%{opacity:.92;transform:rotate(1deg)}}

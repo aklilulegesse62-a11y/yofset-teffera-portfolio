@@ -25,8 +25,13 @@
       .f-navy{fill:#0b1c2e}.f-blue{fill:#386fa8}.f-gold{fill:#c79b3a}.f-red{fill:#a83b30}.f-green{fill:#285f4b}.f-sand{fill:#e7ddd0}.f-black{fill:#242a31}
       .flower-bloom{transform-box:fill-box;transform-origin:center;animation:flowerBloom 7s cubic-bezier(.25,.7,.25,1) infinite}
       .flower-bloom-delay{animation-delay:-2.3s}.flower-bloom-late{animation-delay:-4.6s}
+      .simple-flower-stem{stroke-dasharray:180;stroke-dashoffset:180;animation:simpleStemGrow 7s ease-in-out infinite}
+      .simple-flower-leaf{transform-box:fill-box;transform-origin:center bottom;animation:simpleLeafOpen 7s ease-in-out infinite}
+      .simple-flower-leaf-right{animation-delay:.35s}
       @keyframes flowerBloom{0%,14%{transform:scale(.18) rotate(-8deg);opacity:.2}38%,72%{transform:scale(1) rotate(0);opacity:1}88%,100%{transform:scale(.72) rotate(4deg);opacity:.58}}
-      @media(prefers-reduced-motion:reduce){.flower-bloom{animation:none}}
+      @keyframes simpleStemGrow{0%,8%{stroke-dashoffset:180;opacity:.25}30%,78%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-180;opacity:.25}}
+      @keyframes simpleLeafOpen{0%,18%{transform:scale(.08) rotate(-12deg);opacity:0}38%,78%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(.72) rotate(6deg);opacity:.45}}
+      @media(prefers-reduced-motion:reduce){.flower-bloom,.simple-flower-stem,.simple-flower-leaf{animation:none}}
     </style>
   </defs>
 
@@ -200,6 +205,22 @@
   </g>
 
   <g id="hand-painted-floral-corner" class="decor" filter="url(#rough)">
+    <!-- simple hand-drawn flower -->
+    <g transform="translate(112 765)">
+      <path d="M0 171 C-2 118 1 69 8 20" class="line simple-flower-stem" stroke="#214f40" stroke-width="4"/>
+      <path class="simple-flower-leaf" d="M1 112 C-28 96-43 72-41 49 C-13 54 5 73 9 101Z" fill="#285f4b" stroke="#173e34" stroke-width="1.5"/>
+      <path class="simple-flower-leaf simple-flower-leaf-right" d="M4 86 C30 66 51 41 57 17 C30 21 10 40 5 69Z" fill="#285f4b" stroke="#173e34" stroke-width="1.5"/>
+      <g class="flower-bloom">
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5"/>
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5" transform="rotate(60)"/>
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5" transform="rotate(120)"/>
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5" transform="rotate(180)"/>
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5" transform="rotate(240)"/>
+        <ellipse rx="14" ry="39" cy="-34" fill="#386fa8" stroke="#244f8e" stroke-width="2.5" transform="rotate(300)"/>
+        <circle r="15" fill="#c79b3a" stroke="#9d742a" stroke-width="2"/>
+      </g>
+    </g>
+    <g opacity="0">
     <!-- branching stems -->
     <path d="M39 936 C47 857 65 775 92 692 C111 635 129 584 146 531 M56 857 C34 821 21 787 16 753 M70 790 C98 759 118 726 130 689 M88 714 C61 683 45 650 40 613 M110 635 C132 611 149 582 159 550 M113 936 C125 892 143 847 169 804 M145 870 C173 851 197 830 213 801" class="line" stroke="#214f40" stroke-width="4"/>
     <!-- dark green leaves with painted veins -->
@@ -233,18 +254,19 @@
       <circle r="6" fill="#513d31"/><ellipse rx="10" ry="25" cy="-21" fill="#cf9c34"/><ellipse rx="10" ry="25" cy="21" fill="#d3a23b"/><ellipse rx="25" ry="10" cx="-21" fill="#c99730"/><ellipse rx="25" ry="10" cx="21" fill="#d7aa45"/><ellipse rx="9" ry="23" transform="rotate(45) translate(0 -21)" fill="#c79731"/><ellipse rx="9" ry="23" transform="rotate(135) translate(0 -21)" fill="#d2a23b"/>
       </g>
     </g>
+    </g>
   </g>
 
-  <g id="title-brush-underline" class="decor" filter="url(#brush)">
+  <g id="title-brush-underline" class="decor" filter="url(#brush)" opacity="0">
     <path d="M208 647 C319 638 453 650 586 644" class="line blue" stroke-width="7" stroke-dasharray="212 8 123 5" opacity=".95"/>
   </g>
 
-  <g id="cta-hand-arrow" class="decor line black" stroke-width="3" filter="url(#rough)">
+  <g id="cta-hand-arrow" class="decor line black" stroke-width="3" filter="url(#rough)" opacity="0">
     <path d="M519 753 C544 748 565 742 590 730"/>
     <path d="M519 753 L540 739 M519 753 L542 765"/>
   </g>
 
-  <g id="bottom-divider-and-center-motif" class="decor">
+  <g id="bottom-divider-and-center-motif" class="decor" opacity="0">
     <path d="M238 885 C420 878 625 892 807 884 M917 884 C1118 877 1390 893 1620 884" class="line black" stroke-width="6" stroke-dasharray="196 7 334 9 151" opacity=".9" filter="url(#brush)"/>
     <g class="line gold" stroke-width="2.2" transform="translate(862 884)" filter="url(#rough)">
       <path d="M0-27 L27 0 L0 27 L-27 0Z M0-17 L17 0 L0 17 L-17 0Z M-27 0 L-43-16 L-59 0 L-43 16Z M27 0 L43-16 L59 0 L43 16Z"/>
