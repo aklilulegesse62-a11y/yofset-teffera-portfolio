@@ -85,7 +85,7 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .hero-sketch-layer{display:block;width:100%;height:100%;overflow:visible}
 .hero-supplied-overlay{top:-78px;height:calc(100% + 78px)}
 .hero-supplied-overlay~.hero-orbit{visibility:hidden;pointer-events:none}
-.front-sun{transform-box:fill-box;transform-origin:center;animation:front-sun-orbit 13s linear infinite,front-sun-breathe 4.6s ease-in-out infinite}
+.front-sun{transform-box:fill-box;transform-origin:center;animation:front-sun-orbit 10s linear infinite,front-sun-breathe 3.8s ease-in-out infinite}
 .front-moon{transform-box:fill-box;transform-origin:50% 0;animation:front-moon-swing 5.5s ease-in-out infinite}
 .front-eye-shape{transform-box:fill-box;transform-origin:center;animation:front-eye-blink 5s ease-in-out infinite}
 .front-portrait-motion{transform-box:fill-box;transform-origin:center;animation:front-portrait-drift 16s ease-in-out infinite}

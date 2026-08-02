@@ -88,7 +88,7 @@ export function HeroDecorations() {
       </g>
     </g>
     <image className="front-portrait-motion" href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
-    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=clean-hero-1`} width="1694" height="936" />
+    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=animated-splashes-1`} width="1694" height="936" />
     <g className="front-moving-dots" fill="#386fa8">{movingDots}</g>
     <g className="front-rotating-rings" fill="none" strokeLinecap="round"><circle cx="1222" cy="526" r="238" stroke="#386fa8" strokeWidth="3" strokeDasharray="170 18 92 12"/><circle cx="1222" cy="526" r="266" stroke="#c79b3a" strokeWidth="2" strokeDasharray="4 11"/></g>
     <g transform="translate(1535 260)"><g className="front-door" fill="none" stroke="#c79b3a" strokeWidth="1.8" strokeLinecap="round"><path d="M-84 176 V-38 A84 84 0 0 1 84-38 V176"/><path d="M-58 176 V-27 A58 58 0 0 1 58-27 V176"/><path d="M-31 176 V-15 A31 31 0 0 1 31-15 V176" strokeDasharray="7 8"/></g></g>
