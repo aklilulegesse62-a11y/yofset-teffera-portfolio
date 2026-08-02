@@ -80,15 +80,21 @@ export function HeroDecorations() {
   });
   return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
     <defs><clipPath id="heroPortraitClip"><circle cx={1212 + lockedPosition.x} cy={520 + lockedPosition.y} r="197" /></clipPath></defs>
-    <g className="front-wave-loop" transform="translate(0 405)" fill="none" stroke="#c79b3a" strokeWidth="1.7" strokeLinecap="round">
+    <g className="front-wave-loop" transform="translate(0 405)" fill="none" stroke="#c79b3a" strokeWidth="1.9" strokeLinecap="round">
       <g className="front-travelling-waves">
-        <path d="M-1200 0 C-1120-46-1064 50-984 3 S-842-39-762 10 S-620 58-540 6 S-398-42-318 7 S-176 55-96 3 S46-45 126 4 S268 52 348 0 S490-48 570 1 S712 49 792-3 S934-51 1014-2 S1156 46 1236-6 S1378-54 1458-5 S1600 43 1680-9 S1822-57 1902-8 S2044 40 2124-12"/>
-        <path d="M-1200 35 C-1120-11-1064 85-984 38 S-842-4-762 45 S-620 93-540 41 S-398-7-318 42 S-176 90-96 38 S46-10 126 39 S268 87 348 35 S490-13 570 36 S712 84 792 32 S934-16 1014 33 S1156 81 1236 29 S1378-19 1458 30 S1600 78 1680 26 S1822-22 1902 27 S2044 75 2124 23"/>
-        <path d="M-1200 70 C-1120 24-1064 120-984 73 S-842 31-762 80 S-620 128-540 76 S-398 28-318 77 S-176 125-96 73 S46 25 126 74 S268 122 348 70 S490 22 570 71 S712 119 792 67 S934 19 1014 68 S1156 116 1236 64 S1378 16 1458 65 S1600 113 1680 61 S1822 13 1902 62 S2044 110 2124 58"/>
+        <path className="front-wave-path front-wave-one" pathLength="1000" d="M-120 0 Q0-44 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0">
+          <animate attributeName="d" dur="5.6s" repeatCount="indefinite" values="M-120 0 Q0-44 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0 44 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0-44 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0"/>
+        </path>
+        <path className="front-wave-path front-wave-two" pathLength="1000" transform="translate(0 40)" d="M-120 0 Q0 38 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0">
+          <animate attributeName="d" dur="6.2s" begin="-2.1s" repeatCount="indefinite" values="M-120 0 Q0 38 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0-38 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0 38 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0"/>
+        </path>
+        <path className="front-wave-path front-wave-three" pathLength="1000" transform="translate(0 80)" d="M-120 0 Q0-32 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0">
+          <animate attributeName="d" dur="6.8s" begin="-4.2s" repeatCount="indefinite" values="M-120 0 Q0-32 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0 32 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0;M-120 0 Q0-32 120 0 T360 0 T600 0 T840 0 T1080 0 T1320 0 T1560 0 T1800 0"/>
+        </path>
       </g>
     </g>
     <image className="front-portrait-motion" href={siteContent.portrait} x={1015 + lockedPosition.x} y={323 + lockedPosition.y} width="394" height="394" preserveAspectRatio="xMidYMid slice" clipPath="url(#heroPortraitClip)" />
-    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=static-splashes-1`} width="1694" height="936" />
+    <image href={`${withBasePath("/images/yofset-homepage-decorative-elements.svg")}?v=no-flower-1`} width="1694" height="936" />
     <g className="front-moving-dots" fill="#386fa8">{movingDots}</g>
     <g className="front-rotating-rings" fill="none" strokeLinecap="round"><circle cx="1222" cy="526" r="238" stroke="#386fa8" strokeWidth="3" strokeDasharray="170 18 92 12"/><circle cx="1222" cy="526" r="266" stroke="#c79b3a" strokeWidth="2" strokeDasharray="4 11"/></g>
     <g transform="translate(1535 260)"><g className="front-door" fill="none" stroke="#c79b3a" strokeWidth="1.8" strokeLinecap="round"><path d="M-84 176 V-38 A84 84 0 0 1 84-38 V176"/><path d="M-58 176 V-27 A58 58 0 0 1 58-27 V176"/><path d="M-31 176 V-15 A31 31 0 0 1 31-15 V176" strokeDasharray="7 8"/></g></g>

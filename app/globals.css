@@ -95,9 +95,9 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 .front-moving-dots circle:nth-child(4n){animation-delay:-3s}
 .front-moving-dots circle:nth-child(5n){animation-delay:-.75s}
 .front-rotating-rings{transform-origin:1222px 526px;animation:front-ring-turn 38s linear infinite}
-.front-wave-loop{opacity:.62;animation:front-wave-rise 4.8s ease-in-out infinite}
-.front-travelling-waves{animation:front-wave-loop 18s linear infinite}
-.front-travelling-waves path{stroke-dasharray:14 8;animation:front-wave-dash 4s linear infinite}
+.front-wave-loop{opacity:.68}
+.front-wave-path{stroke-dasharray:0 1000;stroke-dashoffset:0;animation:front-wave-trim 7s ease-in-out infinite}
+.front-wave-two{animation-delay:-2.2s;opacity:.78}.front-wave-three{animation-delay:-4.4s;opacity:.58}
 .front-door{stroke-dasharray:520;transform-box:fill-box;transform-origin:center bottom;animation:front-door-draw 10s ease-in-out infinite,front-door-breathe 6s ease-in-out infinite}
 @keyframes front-sun-orbit{to{transform:rotate(360deg)}}
 @keyframes front-sun-breathe{0%,100%{scale:.88;opacity:.72}50%{scale:1.12;opacity:1}}
@@ -107,9 +107,7 @@ body>main,body>.site-header,body>.site-footer{position:relative;z-index:1}
 @keyframes front-dot-orbit{to{transform:rotate(360deg)}}
 @keyframes front-dot-scale{0%,100%{transform:scale(.55);opacity:.3}50%{transform:scale(1.5);opacity:.9}}
 @keyframes front-ring-turn{to{transform:rotate(360deg)}}
-@keyframes front-wave-loop{from{transform:translateX(0)}to{transform:translateX(1200px)}}
-@keyframes front-wave-dash{to{stroke-dashoffset:-44}}
-@keyframes front-wave-rise{0%,100%{translate:0 -15px}50%{translate:0 15px}}
+@keyframes front-wave-trim{0%{stroke-dasharray:0 1000;stroke-dashoffset:0;opacity:.08}42%{stroke-dasharray:1000 0;stroke-dashoffset:0;opacity:.82}72%{stroke-dasharray:1000 0;stroke-dashoffset:-120;opacity:.72}100%{stroke-dasharray:0 1000;stroke-dashoffset:-1000;opacity:.08}}
 @keyframes front-door-draw{0%,12%{stroke-dashoffset:520;opacity:.2}42%,82%{stroke-dashoffset:0;opacity:.82}100%{stroke-dashoffset:-520;opacity:.2}}
 @keyframes front-door-breathe{0%,100%{transform:scale(.985)}50%{transform:scale(1.018)}}
 .female-profile{transform:translate(-36px,22px) scale(1.08);transform-origin:left center}

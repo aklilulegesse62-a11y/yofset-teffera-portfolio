@@ -208,7 +208,7 @@
     <g class="f-navy"><circle cx="173" cy="386" r="3.2"/><circle cx="181" cy="420" r="2.1"/><circle cx="166" cy="438" r="2.6"/><circle cx="200" cy="474" r="3.6"/><circle cx="218" cy="497" r="2.2"/><circle cx="180" cy="514" r="3"/><circle cx="229" cy="525" r="1.8"/><circle cx="205" cy="545" r="3.4"/><circle cx="241" cy="560" r="2.2"/><circle cx="187" cy="575" r="2.7"/><circle cx="222" cy="594" r="3.4"/><circle cx="202" cy="610" r="1.7"/><circle cx="241" cy="625" r="2.3"/><circle cx="56" cy="807" r="2.1"/></g>
   </g>
 
-  <g id="hand-painted-floral-corner" class="decor" filter="url(#rough)">
+  <g id="hand-painted-floral-corner" class="decor" filter="url(#rough)" opacity="0">
     <!-- simple hand-drawn flower -->
     <g transform="translate(112 765)">
       <path d="M0 171 C-2 118 1 69 8 20" class="line simple-flower-stem" stroke="#214f40" stroke-width="4"/>
