@@ -78,6 +78,11 @@ export function HeroDecorations() {
     const radius=286+(index%3)*22;
     return <circle key={index} cx={1222+Math.cos(angle)*radius} cy={526+Math.sin(angle)*radius} r={index%6===0 ? 3 : 1.6} />;
   });
+  const mobileDots = Array.from({length:48},(_,index) => {
+    const angle=(index*7.5)*Math.PI/180;
+    const radius=152+(index%3)*12;
+    return <circle key={index} cx={195+Math.cos(angle)*radius} cy={235+Math.sin(angle)*radius} r={index%6===0 ? 2.4 : 1.25} />;
+  });
   return <div className="hero-handmade hero-supplied-overlay" aria-hidden="true"><svg className="hero-sketch-layer" viewBox="0 0 1694 936" preserveAspectRatio="xMidYMid slice">
     <defs><clipPath id="heroPortraitClip"><circle cx={1212 + lockedPosition.x} cy={520 + lockedPosition.y} r="197" /></clipPath></defs>
     <g className="front-wave-loop" transform="translate(0 405)" fill="none" stroke="#c79b3a" strokeWidth="1.9" strokeLinecap="round">
@@ -107,6 +112,21 @@ export function HeroDecorations() {
     <g className="front-eye" transform="translate(793 318)">
       <g className="front-eye-shape" fill="none" stroke="#0b1c2e" strokeWidth="2.8" strokeLinecap="round"><path d="M-28 0 Q0-21 28 0 Q0 21-28 0Z"/><circle r="8" fill="#c79b3a" stroke="none"/><path d="M0-29V-21 M-14-25L-10-18 M14-25L10-18" strokeWidth="2"/></g>
     </g>
+  </svg>
+  <svg className="hero-mobile-animation" viewBox="0 0 390 430" preserveAspectRatio="xMidYMid meet">
+    <defs><clipPath id="mobileHeroPortraitClip"><circle cx="195" cy="235" r="116" /></clipPath></defs>
+    <g className="mobile-wave-loop" fill="none" stroke="#c79b3a" strokeWidth="1.35" strokeLinecap="round">
+      <path className="mobile-wave-path" pathLength="1000" d="M-40 120 Q20 96 80 120 T200 120 T320 120 T440 120"><animate attributeName="d" dur="5.4s" repeatCount="indefinite" values="M-40 120 Q20 96 80 120 T200 120 T320 120 T440 120;M-40 120 Q20 144 80 120 T200 120 T320 120 T440 120;M-40 120 Q20 96 80 120 T200 120 T320 120 T440 120"/></path>
+      <path className="mobile-wave-path mobile-wave-two" pathLength="1000" d="M-40 146 Q20 168 80 146 T200 146 T320 146 T440 146"><animate attributeName="d" dur="6.1s" begin="-2s" repeatCount="indefinite" values="M-40 146 Q20 168 80 146 T200 146 T320 146 T440 146;M-40 146 Q20 124 80 146 T200 146 T320 146 T440 146;M-40 146 Q20 168 80 146 T200 146 T320 146 T440 146"/></path>
+    </g>
+    <g className="mobile-moving-dots" fill="#386fa8">{mobileDots}</g>
+    <g className="mobile-rotating-rings" fill="none" strokeLinecap="round"><circle cx="195" cy="235" r="136" stroke="#386fa8" strokeWidth="2.4" strokeDasharray="96 14 54 10"/><circle cx="195" cy="235" r="148" stroke="#c79b3a" strokeWidth="1.5" strokeDasharray="3 9"/></g>
+    <image className="mobile-portrait-motion" href={siteContent.portrait} x="79" y="119" width="232" height="232" preserveAspectRatio="xMidYMid slice" clipPath="url(#mobileHeroPortraitClip)" />
+    <circle cx="195" cy="235" r="117" fill="none" stroke="#071C2C" strokeWidth="2" opacity=".7"/>
+    <g transform="translate(73 66)"><g className="front-sun" fill="none" stroke="#c79b3a" strokeWidth="2" strokeLinecap="round"><circle r="14"/><path d="M0-22V-31 M0 22V31 M-22 0H-31 M22 0H31 M-16-16L-23-23 M16-16L23-23 M-16 16L-23 23 M16 16L23 23"/></g></g>
+    <g transform="translate(320 82)"><g className="front-moon" fill="#386fa8" stroke="#386fa8" strokeWidth="2"><path d="M10-23 C-8-20-17-4-13 13 C-9 30 9 38 25 30 C11 28 2 16 3 2 C3-8 6-16 10-23Z"/></g></g>
+    <g className="front-eye" transform="translate(48 210)"><g className="front-eye-shape" fill="none" stroke="#0b1c2e" strokeWidth="2.3" strokeLinecap="round"><path d="M-22 0 Q0-16 22 0 Q0 16-22 0Z"/><circle r="6.5" fill="#c79b3a" stroke="none"/></g></g>
+    <g className="mobile-door" transform="translate(348 250)" fill="none" stroke="#c79b3a" strokeWidth="1.4"><path d="M-28 72V4A28 28 0 0 1 28 4V72"/><path d="M-18 72V8A18 18 0 0 1 18 8V72"/></g>
   </svg></div>;
 }
 
